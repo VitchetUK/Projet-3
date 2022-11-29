@@ -18,7 +18,7 @@ function App() {
           <Route path="/signup" element={<Signup />} />
         </Route>
         <Route element={<PrivateRoute />}>
-          {/* All routes after the PrivateRoute require the user to be loggedIn */}
+          {/* All routes after the PrivateRoute require the user to be loggedIn !!*/}
           <Route path="/profile" element={<Profile />} />
         </Route>
       </Routes>
