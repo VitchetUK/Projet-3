@@ -23,7 +23,8 @@ const FormMusician = () => {
         navigate("/allMusicians");
       })
       .catch((e) => {
-        setError(e.response.data);
+        console.log(e);
+        setError(e);
       });
   };
 

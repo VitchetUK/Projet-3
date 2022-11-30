@@ -72,6 +72,13 @@ const service = {
       .catch(errorHandler);
   },
 
+  getAllMusicians() {
+    return service
+      .get("/api/musicianReq/allMusicians")
+      .then((res) => res.data)
+      .catch(errorHandler);
+  },
+
   // getAllTheCats() {
   // 	return service
   // 		.get("/api/cats")
