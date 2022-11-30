@@ -6,6 +6,7 @@ import Signup from "./pages/Signup";
 import Profile from "./pages/Profile";
 import PrivateRoute from "./components/ProtectedRoute/PrivateRoute";
 import LoggedOut from "./components/LoggedOut/LoggedOut";
+import AllBand from "./components/Band/AllBand";
 
 function App() {
   return (
@@ -13,6 +14,10 @@ function App() {
       <NavMain />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/allBandRequest" element={<AllBand />} />
+        {/*<Route index element={<ListCharacters />} />
+          <Route path=":id" element={<OneBand />} />
+        </Route> */}
         <Route element={<LoggedOut />}>
           <Route path="/signin" element={<Signin />} />
           <Route path="/signup" element={<Signup />} />
