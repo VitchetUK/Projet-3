@@ -3,26 +3,38 @@ import useAuth from "../../auth/useAuth";
 import "../../styles/NavMain.css";
 
 const NavMain = () => {
-	const { isLoggedIn, currentUser, removeUser } = useAuth();
-	return (
-		<nav className="NavMain">
-			<NavLink className="logo" to="/">
-				App name
-			</NavLink>
-			{isLoggedIn && (
-				<>
-					<NavLink to="/profile">{currentUser && currentUser.email}</NavLink>
-					<button onClick={removeUser}>Log-Out</button>
-				</>
-			)}
-			{!isLoggedIn && (
-				<>
-					<NavLink to="/signin">Log in</NavLink>
-					<NavLink to="/signup">Sign Up</NavLink>
-				</>
-			)}
-		</nav>
-	);
+  const { isLoggedIn, currentUser, removeUser } = useAuth();
+  return (
+    <nav className="NavMain stroke">
+      <ul className="ulNav">
+        <li>
+          <NavLink className="logo" to="/">
+            App name
+          </NavLink>
+        </li>
+        {isLoggedIn && (
+          <>
+            <li>
+              <NavLink to="/profile">
+                {currentUser && currentUser.email}
+              </NavLink>
+            </li>
+            <button onClick={removeUser}>Log-Out</button>
+          </>
+        )}
+        {!isLoggedIn && (
+          <>
+            <li>
+              <NavLink to="/signin">Log in</NavLink>
+            </li>
+            <li>
+              <NavLink to="/signup">Sign Up</NavLink>
+            </li>
+          </>
+        )}
+      </ul>
+    </nav>
+  );
 };
 
 export default NavMain;
