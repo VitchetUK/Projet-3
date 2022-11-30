@@ -52,7 +52,7 @@ const service = {
   },
   createBand(reqInfo) {
     return service
-      .post("/api/bandReq/allBand", reqInfo)
+      .post("/api/bandReq/allBands/create", reqInfo)
       .then((res) => res.data)
       .catch(errorHandler);
   },
