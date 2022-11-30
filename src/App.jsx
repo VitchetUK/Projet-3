@@ -7,6 +7,7 @@ import Profile from "./pages/Profile";
 import PrivateRoute from "./components/ProtectedRoute/PrivateRoute";
 import LoggedOut from "./components/LoggedOut/LoggedOut";
 import AllBand from "./components/Band/AllBand";
+import FormBand from "./components/Forms/FormBand";
 
 function App() {
   return (
@@ -14,7 +15,8 @@ function App() {
       <NavMain />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/allBandRequest" element={<AllBand />} />
+        <Route path="/allBand" element={<AllBand />} />
+        <Route path="/allBand/create" element={<FormBand />} />
         {/*<Route index element={<ListCharacters />} />
           <Route path=":id" element={<OneBand />} />
         </Route> */}
