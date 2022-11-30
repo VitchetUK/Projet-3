@@ -50,12 +50,14 @@ const service = {
       .then((res) => res.data)
       .catch(errorHandler);
   },
+  
   createBand(reqInfo) {
     return service
-      .post("/api/bandReq/allBandRequest", reqInfo)
+      .post("/api/bandReq/allBands/create", reqInfo)
       .then((res) => res.data)
       .catch(errorHandler);
   },
+  
   createMusician(reqInfo) {
     return service
       .post("/api/musicianReq/allMusicianRequest", reqInfo)
