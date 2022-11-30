@@ -21,8 +21,11 @@ const AllBands = () => {
         return (
           <li key={element._id}>
             <Link to={`${element._id}`}>clique ici</Link>
-            <p>{element.musicStyle}</p>
-            <p>{element.searchedMusician}</p>
+            <p>Music Style: {element.musicStyle}</p>
+            <p>Looking for: {element.searchedMusician}</p>
+            <p>City: {element.city}</p>
+            <p>Description: {element.description}</p>
+            <p>=====================NEXT===================</p>
           </li>
         );
       })}
