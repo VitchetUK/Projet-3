@@ -21,13 +21,13 @@ function App() {
         <Route path="/" element={<Home />} />
 
         <Route path="/allBands" element={<AllBands />} />
-        
+
         <Route path="/allMusicians" element={<AllMusicians />} />
-        
+
         <Route path="/allBands/create" element={<FormBand />} />
-        
+
         <Route path="/allMusicians/create" element={<FormMusician />} />
-        
+
         {/*<Route index element={<ListCharacters />} />
           <Route path=":id" element={<OneBand />} />
         </Route>
