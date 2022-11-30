@@ -42,7 +42,7 @@ nav ul li a {
   padding: 15px 10px;
   text-decoration: none;
   color: rgb(255, 255, 255);
-  font-weight: 800;
+  /* font-weight: 500; */
   text-transform: uppercase;
   margin: 0 3rem;
 }

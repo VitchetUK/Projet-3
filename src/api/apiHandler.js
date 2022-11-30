@@ -52,7 +52,13 @@ const service = {
   },
   createBand(reqInfo) {
     return service
-      .post("/api/bandReq/allBand", reqInfo)
+      .post("/api/bandReq/allBandRequest", reqInfo)
+      .then((res) => res.data)
+      .catch(errorHandler);
+  },
+  createMusician(reqInfo) {
+    return service
+      .post("/api/musicianReq/allMusicianRequest", reqInfo)
       .then((res) => res.data)
       .catch(errorHandler);
   },

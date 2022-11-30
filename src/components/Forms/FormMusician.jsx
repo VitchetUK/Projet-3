@@ -3,11 +3,12 @@ import useForm from "../../hooks/useForm";
 import apiHandler from "../../api/apiHandler";
 import { useNavigate } from "react-router-dom";
 
-const FormBand = () => {
+const FormMusician = () => {
   const [values, handleChange] = useForm({
-    searchedMusician: "",
+    instruments: "",
     musicStyle: "",
     city: "",
+    experience: "",
     description: "",
     availability: "",
   });
@@ -17,9 +18,9 @@ const FormBand = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     apiHandler
-      .createBand(values)
+      .createMusician(values)
       .then(() => {
-        navigate("/allBands");
+        navigate("/allMusicians");
       })
       .catch((e) => {
         setError(e.response.data);
@@ -30,14 +31,14 @@ const FormBand = () => {
     <>
       {error && <h3 className="error">{error.message}</h3>}
       <form onSubmit={handleSubmit}>
-        <h2>Create a request for your band</h2>
-        <label htmlFor="searchedMusician">searchedMusician</label>
+        <h2>Create a request</h2>
+        <label htmlFor="instruments">instruments</label>
         <input
           type="string"
-          id="searchedMusician"
-          name="searchedMusician"
+          id="instruments"
+          name="instruments"
           onChange={handleChange}
-          value={values.searchedMusician}
+          value={values.instruments}
         />
         <label htmlFor="musicStyle">musicStyle</label>
         <input
@@ -54,6 +55,14 @@ const FormBand = () => {
           name="city"
           onChange={handleChange}
           value={values.city}
+        />
+        <label htmlFor="experience">experience</label>
+        <input
+          type="string"
+          id="experience"
+          name="experience"
+          onChange={handleChange}
+          value={values.experience}
         />
         <label htmlFor="description">description</label>
         <input
@@ -77,4 +86,4 @@ const FormBand = () => {
   );
 };
 
-export default FormBand;
+export default FormMusician;
