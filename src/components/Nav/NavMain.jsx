@@ -21,7 +21,8 @@ const NavMain = () => {
             </li>
             <button onClick={removeUser}>Log-Out</button>
             <li>
-              <NavLink to="/allBandRequest">AllBand</NavLink>
+              <NavLink to="/allBand">AllBand</NavLink>
+              <NavLink to="/allBand/create">AllBandForm</NavLink>
             </li>
           </>
         )}
