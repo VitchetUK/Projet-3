@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
 /* .NavMain {
   display: flex;
   gap: 0.5em;
@@ -18,6 +20,7 @@ nav {
   overflow: hidden;
   /* background-color: rgb(64, 65, 63); */
   font-size: 0.8em;
+  font-weight: bolder;
 }
 
 nav {
@@ -41,21 +44,29 @@ nav ul li a {
   color: rgb(255, 255, 255);
   font-weight: 800;
   text-transform: uppercase;
-  margin: 0 10px;
+  margin: 0 3rem;
 }
+.logoutBtn,
+.logoutBtn:after,
+.logoutBtn:before,
 nav ul li a,
 nav ul li a:after,
 nav ul li a:before {
   transition: all 0.5s;
 }
+.logoutBtn:hover,
 nav ul li a:hover {
   color: #c4fcef;
 }
 
+nav.stroke .logoutBtn,
+nav.fill .logoutBtn,
 nav.stroke ul li a,
 nav.fill ul li a {
   position: relative;
 }
+nav.stroke .logoutBtn:after,
+nav.fill .logoutBtn:after,
 nav.stroke ul li a:after,
 nav.fill ul li a:after {
   position: absolute;
@@ -67,23 +78,24 @@ nav.fill ul li a:after {
   content: ".";
   color: transparent;
   background: #c4fcef;
-  height: 1px;
+  height: 1.5px;
 }
+nav.stroke .logoutBtn:hover:after,
 nav.stroke ul li a:hover:after {
   width: 100%;
 }
-
+.logoutBtn.fill,
 nav.fill ul li a {
   transition: all 2s;
 }
 
-nav.fill ul li a:after {
+/* nav.fill ul li a:after {
   text-align: left;
   content: ".";
   margin: 0;
   opacity: 0;
-}
-nav.fill ul li a:hover {
+} */
+/* nav.fill ul li a:hover {
   color: #fff;
   z-index: 1;
 }
@@ -93,4 +105,18 @@ nav.fill ul li a:hover:after {
   -webkit-animation: fill 1s forwards;
   -moz-animation: fill 1s forwards;
   opacity: 1;
+} */
+
+.logoutBtn {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 15px 10px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 0 10px;
+  overflow: hidden;
+  cursor: pointer;
 }

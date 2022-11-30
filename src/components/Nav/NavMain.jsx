@@ -9,20 +9,22 @@ const NavMain = () => {
       <ul className="ulNav">
         <li>
           <NavLink className="logo" to="/">
-            App name
+            muSeek
           </NavLink>
         </li>
         {isLoggedIn && (
           <>
             <li>
               <NavLink to="/profile">
-                {currentUser && currentUser.email}
+                Hi {currentUser && currentUser.name}
               </NavLink>
             </li>
-            <button onClick={removeUser}>Log-Out</button>
+            <button class="logoutBtn" onClick={removeUser}>
+              Log-Out
+            </button>
             <li>
-              <NavLink to="/allBand">AllBand</NavLink>
-              <NavLink to="/allBand/create">AllBandForm</NavLink>
+              <NavLink to="/allBands">AllBand</NavLink>
+              <NavLink to="/allBands/create">AllBandForm</NavLink>
             </li>
           </>
         )}

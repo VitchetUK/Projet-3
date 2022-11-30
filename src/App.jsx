@@ -6,8 +6,10 @@ import Signup from "./pages/Signup";
 import Profile from "./pages/Profile";
 import PrivateRoute from "./components/ProtectedRoute/PrivateRoute";
 import LoggedOut from "./components/LoggedOut/LoggedOut";
-import AllBand from "./components/Band/AllBand";
-import FormBand from "./components/Forms/FormBand";
+import AllBands from "./components/Band/AllBands";
+import OneBand from "./components/Band/OneBand";
+import AllMusicians from "./components/Musician/AllMusicians";
+import OneMusician from "./components/Musician/OneMusician";
 
 function App() {
   return (
@@ -15,11 +17,16 @@ function App() {
       <NavMain />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/allBand" element={<AllBand />} />
-        <Route path="/allBand/create" element={<FormBand />} />
+
+        <Route path="/allBands" element={<AllBand />} />
+        <Route path="/allBands/create" element={<FormBand />} />
         {/*<Route index element={<ListCharacters />} />
           <Route path=":id" element={<OneBand />} />
-        </Route> */}
+        </Route>
+        <Route path="/allMusiciansRequest" element={<AllMusicians />}>
+          <Route path=":id" element={<OneMusician />} />
+        </Route>
+        {/*<Route index element={<ListCharacters />} /> */}
         <Route element={<LoggedOut />}>
           <Route path="/signin" element={<Signin />} />
           <Route path="/signup" element={<Signup />} />
