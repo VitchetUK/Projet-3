@@ -10,7 +10,6 @@ const FormBand = () => {
     city: "",
     description: "",
     availability: "",
-    isArchived: "",
   });
   const [error, setError] = useState(null);
   const navigate = useNavigate();
@@ -20,7 +19,7 @@ const FormBand = () => {
     apiHandler
       .createBand(values)
       .then(() => {
-        navigate("allBand");
+        navigate("/allBands");
       })
       .catch((e) => {
         setError(e.response.data);
