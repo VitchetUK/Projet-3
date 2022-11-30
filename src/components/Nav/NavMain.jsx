@@ -20,6 +20,9 @@ const NavMain = () => {
               </NavLink>
             </li>
             <button onClick={removeUser}>Log-Out</button>
+            <li>
+              <NavLink to="/allBandRequest">AllBand</NavLink>
+            </li>
           </>
         )}
         {!isLoggedIn && (
