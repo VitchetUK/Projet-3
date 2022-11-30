@@ -11,6 +11,7 @@ import OneBand from "./components/Band/OneBand";
 import AllMusicians from "./components/Musician/AllMusicians";
 import OneMusician from "./components/Musician/OneMusician";
 import FormBand from "./components/Forms/FormBand";
+import FormMusician from "./components/Forms/FormMusician";
 
 function App() {
   return (
@@ -20,7 +21,13 @@ function App() {
         <Route path="/" element={<Home />} />
 
         <Route path="/allBands" element={<AllBands />} />
+        
+        <Route path="/allMusicians" element={<AllMusicians />} />
+        
         <Route path="/allBands/create" element={<FormBand />} />
+        
+        <Route path="/allMusicians/create" element={<FormMusician />} />
+        
         {/*<Route index element={<ListCharacters />} />
           <Route path=":id" element={<OneBand />} />
         </Route>

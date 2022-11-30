@@ -19,12 +19,20 @@ const NavMain = () => {
                 Hi {currentUser && currentUser.name}
               </NavLink>
             </li>
-            <button class="logoutBtn" onClick={removeUser}>
+            <button className="logoutBtn" onClick={removeUser}>
               Log-Out
             </button>
             <li>
               <NavLink to="/allBands">AllBand</NavLink>
+            </li>
+            <li>
               <NavLink to="/allBands/create">AllBandForm</NavLink>
+            </li>
+            <li>
+              <NavLink to="/allMusicians">allMusicians</NavLink>
+            </li>
+            <li>
+              <NavLink to="/allMusicians/create">allMusiciansForm</NavLink>
             </li>
           </>
         )}
