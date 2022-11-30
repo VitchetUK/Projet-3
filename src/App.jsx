@@ -17,7 +17,10 @@ function App() {
       <NavMain />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/allBandsRequest" element={<AllBands />}>
+
+        <Route path="/allBands" element={<AllBand />} />
+        <Route path="/allBands/create" element={<FormBand />} />
+        {/*<Route index element={<ListCharacters />} />
           <Route path=":id" element={<OneBand />} />
         </Route>
         <Route path="/allMusiciansRequest" element={<AllMusicians />}>

@@ -23,7 +23,8 @@ const NavMain = () => {
               Log-Out
             </button>
             <li>
-              <NavLink to="/allBandRequest">AllBands</NavLink>
+              <NavLink to="/allBands">AllBand</NavLink>
+              <NavLink to="/allBands/create">AllBandForm</NavLink>
             </li>
           </>
         )}
