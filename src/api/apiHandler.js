@@ -65,6 +65,13 @@ const service = {
       .catch(errorHandler);
   },
 
+  getAllBands() {
+    return service
+      .get("/api/bandReq/allBands")
+      .then((res) => res.data)
+      .catch(errorHandler);
+  },
+
   // getAllTheCats() {
   // 	return service
   // 		.get("/api/cats")
