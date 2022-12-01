@@ -22,9 +22,11 @@ function App() {
 
         <Route path="/allBands" element={<AllBands />} />
 
-        <Route path="/allMusicians" element={<AllMusicians />} />
+        <Route path="/allBands/:id" element={<OneBand />} />
 
         <Route path="/allBands/create" element={<FormBand />} />
+
+        <Route path="/allMusicians" element={<AllMusicians />} />
 
         <Route path="/allMusicians/create" element={<FormMusician />} />
 
