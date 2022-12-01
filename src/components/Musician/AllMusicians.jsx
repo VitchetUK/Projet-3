@@ -16,17 +16,23 @@ const AllMusicians = () => {
   }
 
   return (
-    <div className="allPostsDiv">
-      {musicians.map((element) => {
-        return (
-          <div className="onePostDiv" key={element._id}>
-            <Link to={`${element._id}`}>clique</Link>
-            <p>{element.instruments}</p>
-            <p>{element.musicStyle}</p>
-          </div>
-        );
-      })}
-    </div>
+    <>
+      <div className="searchDiv"></div>
+      <div className="allPostsDiv">
+        {musicians.map((element) => {
+          return (
+            <div className="onePostDiv" key={element._id}>
+              <Link to={`${element._id}`}>clique</Link>
+              <p>{element.instruments}</p>
+              <p>{element.musicStyle}</p>
+              <p>{element.city}</p>
+              <p>{element.experience}</p>
+              <p>{element.availability}</p>
+            </div>
+          );
+        })}
+      </div>
+    </>
   );
 };
 

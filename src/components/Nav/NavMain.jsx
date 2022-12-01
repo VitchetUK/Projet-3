@@ -15,25 +15,26 @@ const NavMain = () => {
         {isLoggedIn && (
           <>
             <li>
-              <NavLink to="/profile">
-                Hi {currentUser && currentUser.name}
-              </NavLink>
-            </li>
-            <button className="logoutBtn" onClick={removeUser}>
-              Log-Out
-            </button>
-            <li>
               <NavLink to="/allBands">All Bands</NavLink>
-            </li>
-            <li>
-              <NavLink to="/allBands/create">All Bands Form</NavLink>
             </li>
             <li>
               <NavLink to="/allMusicians">all Musicians</NavLink>
             </li>
             <li>
-              <NavLink to="/allMusicians/create">all Musicians Form</NavLink>
+              <NavLink to="/allBands/create">Bands Form</NavLink>
             </li>
+            <li>
+              <NavLink to="/allMusicians/create">Musicians Form</NavLink>
+            </li>
+            <li>
+              <NavLink to="/profile">
+                {/* Hi {currentUser && currentUser.name} */}
+                my profile
+              </NavLink>
+            </li>
+            <button className="logoutBtn" onClick={removeUser}>
+              Log-Out
+            </button>
           </>
         )}
         {!isLoggedIn && (
