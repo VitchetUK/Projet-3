@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: #fcfcfcff;
+}
+
 /* html {
 	font-family: "Manrope", sans-serif;
 }
@@ -19,6 +23,14 @@ ul {
 	list-style-type: none;
 } */
 
+.searchDiv {
+  height: 4rem;
+  width: 90%;
+  box-shadow: 0 15px 20px -20px rgb(200, 200, 200);
+  margin: 5px 0 30px 5%;
+  background-color: #fcfcfcff;
+}
+
 .allPostsDiv {
   display: flex;
   flex-wrap: wrap;
@@ -26,8 +38,12 @@ ul {
   justify-content: left;
   max-width: 80%;
   margin-left: 10%;
-  margin-top: 5px;
-  background-color: #b0a8b9;
+  /* margin-top: 15px; */
+  /* background-color: #b0a8b9; */
+  background-color: #fcfcfcff;
+  border-left: 3px solid #ff8066;
+  /* box-shadow: 20px 0 20px -10px rgb(211, 210, 210),
+    -20px 0 20px -10px rgb(211, 210, 210); */
 }
 
 .onePostDiv {
@@ -38,7 +54,7 @@ ul {
   margin-top: 4rem;
   padding: 1rem;
   min-width: 20%;
-  border-top: 3px solid #ff8066;
+  border-top: 3px solid #fcaf9f;
   border-radius: 5px;
   background-color: white;
 }
@@ -46,4 +62,8 @@ ul {
 a {
   text-decoration: none;
   color: grey;
+}
+
+.oneBandId {
+  margin-left: 4rem;
 }

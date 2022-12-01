@@ -19,7 +19,20 @@ const OneBand = () => {
 
   if (!band) return <div className="loading">Loading...</div>;
 
-  return <pre>{JSON.stringify(band, null, 2)}</pre>;
+  // return <pre>{JSON.stringify(band, null, 2)}</pre>;
+  return (
+    <>
+      <div className="searchDiv"></div>
+      <div className="oneBandId">
+        {/* <p>{band.name} is loking for:</p> */}
+        <p>{band.searchedMusician}</p>
+        <p>{band.musicStyle}</p>
+        <p>{band.city}</p>
+        <p>{band.description}</p>
+        <p>{band.availability}</p>
+      </div>
+    </>
+  );
 };
 
 export default OneBand;

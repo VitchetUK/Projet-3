@@ -20,13 +20,18 @@ const OneMusician = () => {
   if (!musician) return <div className="loading">Loading...</div>;
 
   return (
-    <div>
-      <p>{musician.instruments}</p>
-      <p>{musician.musicStyle}</p>
-      <p>{musician.city}</p>
-      <p>{musician.experience}</p>
-      <p>{musician.description}</p>
-    </div>
+    <>
+      <div className="searchDiv"></div>
+      <div className="allPostsDiv">
+        <div className="onePostDiv">
+          <p>{musician.instruments}</p>
+          <p>{musician.musicStyle}</p>
+          <p>{musician.city}</p>
+          <p>{musician.experience}</p>
+          <p>{musician.description}</p>
+        </div>
+      </div>
+    </>
   );
   // return <pre>{JSON.stringify(musician, null, 2)}</pre>;
 };
