@@ -23,16 +23,16 @@ const NavMain = () => {
               Log-Out
             </button>
             <li>
-              <NavLink to="/allBands">AllBand</NavLink>
+              <NavLink to="/allBands">All Bands</NavLink>
             </li>
             <li>
-              <NavLink to="/allBands/create">AllBandForm</NavLink>
+              <NavLink to="/allBands/create">All Bands Form</NavLink>
             </li>
             <li>
-              <NavLink to="/allMusicians">allMusicians</NavLink>
+              <NavLink to="/allMusicians">all Musicians</NavLink>
             </li>
             <li>
-              <NavLink to="/allMusicians/create">allMusiciansForm</NavLink>
+              <NavLink to="/allMusicians/create">all Musicians Form</NavLink>
             </li>
           </>
         )}

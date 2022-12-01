@@ -18,3 +18,31 @@ a {
 ul {
 	list-style-type: none;
 } */
+
+.allPostsDiv {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: left;
+  max-width: 80%;
+  margin-left: 10%;
+  background-color: #b0a8b9;
+}
+
+.onePostDiv {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 2rem;
+  margin-top: 4rem;
+  padding: 1rem;
+  min-width: 20%;
+  border-top: 3px solid #ff8066;
+  border-radius: 5px;
+  background-color: white;
+}
+
+a {
+  text-decoration: none;
+  color: grey;
+}
