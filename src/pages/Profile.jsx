@@ -23,8 +23,14 @@ const Profile = () => {
 
   return (
     <>
-      <div>{user.name}</div>
-      <div>{user.email}</div>
+      <input type="email" id="email" name="email" value={user.email} />
+      <label htmlFor="username">username</label>
+      <input
+        type="string"
+        id="username"
+        name="username"
+        value={user.username}
+      />
     </>
   );
 };

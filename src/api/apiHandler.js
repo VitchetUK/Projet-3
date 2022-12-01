@@ -86,6 +86,13 @@ const service = {
       .catch(errorHandler);
   },
 
+  updateProfile(reqInfo) {
+    return service
+      .post("/api/profile", reqInfo)
+      .then((res) => res.data)
+      .catch(errorHandler);
+  },
+
   // getAllTheCats() {
   // 	return service
   // 		.get("/api/cats")

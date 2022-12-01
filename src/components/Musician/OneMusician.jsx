@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import service from "../../api/apiHandler";
+import { Link } from "react-router-dom";
 
 const OneMusician = () => {
   const [musician, setMusician] = useState(null);
@@ -21,6 +22,7 @@ const OneMusician = () => {
 
   return (
     <div>
+      <Link to={`${musician.user}`}>Contact them</Link>
       <p>{musician.instruments}</p>
       <p>{musician.musicStyle}</p>
       <p>{musician.city}</p>
