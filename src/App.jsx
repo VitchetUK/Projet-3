@@ -28,6 +28,8 @@ function App() {
 
         <Route path="/allMusicians" element={<AllMusicians />} />
 
+        <Route path="/allMusicians/:id" element={<OneMusician />} />
+
         <Route path="/allMusicians/create" element={<FormMusician />} />
 
         {/*<Route index element={<ListCharacters />} />
