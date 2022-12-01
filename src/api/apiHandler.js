@@ -53,28 +53,28 @@ const service = {
 
   createBand(reqInfo) {
     return service
-      .post("/api/bandReq/allBands/create", reqInfo)
+      .post("/api/bands", reqInfo)
       .then((res) => res.data)
       .catch(errorHandler);
   },
 
   createMusician(reqInfo) {
     return service
-      .post("/api/musicianReq/allMusicians/create", reqInfo)
+      .post("/api/musicians", reqInfo)
       .then((res) => res.data)
       .catch(errorHandler);
   },
 
   getAllBands() {
     return service
-      .get("/api/bandReq/allBands")
+      .get("/api/bands")
       .then((res) => res.data)
       .catch(errorHandler);
   },
 
   getAllMusicians() {
     return service
-      .get("/api/musicianReq/allMusicians")
+      .get("/api/musicians")
       .then((res) => res.data)
       .catch(errorHandler);
   },
