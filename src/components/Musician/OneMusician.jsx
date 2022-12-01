@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import service from "../../api/apiHandler";
+import { Link } from "react-router-dom";
 
 const OneMusician = () => {
   const [musician, setMusician] = useState(null);
@@ -20,18 +21,14 @@ const OneMusician = () => {
   if (!musician) return <div className="loading">Loading...</div>;
 
   return (
-    <>
-      <div className="searchDiv"></div>
-      <div className="allPostsDiv">
-        <div className="onePostDiv">
-          <p>{musician.instruments}</p>
-          <p>{musician.musicStyle}</p>
-          <p>{musician.city}</p>
-          <p>{musician.experience}</p>
-          <p>{musician.description}</p>
-        </div>
-      </div>
-    </>
+    <div>
+      <Link to={`${musician.user}`}>Contact them</Link>
+      <p>{musician.instruments}</p>
+      <p>{musician.musicStyle}</p>
+      <p>{musician.city}</p>
+      <p>{musician.experience}</p>
+      <p>{musician.description}</p>
+    </div>
   );
   // return <pre>{JSON.stringify(musician, null, 2)}</pre>;
 };
