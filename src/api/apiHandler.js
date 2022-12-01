@@ -79,6 +79,13 @@ const service = {
       .catch(errorHandler);
   },
 
+  getOneProfile() {
+    return service
+      .get("/api/profile/profile")
+      .then((res) => res.data)
+      .catch(errorHandler);
+  },
+
   // getAllTheCats() {
   // 	return service
   // 		.get("/api/cats")
