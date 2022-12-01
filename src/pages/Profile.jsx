@@ -4,13 +4,13 @@ import service from "../api/apiHandler";
 
 const Profile = () => {
   const [user, setUser] = useState(null);
-  let { userId } = useParams;
 
   useEffect(() => {
     service
-      .get(`/profile/${userId}`)
+      .getOneProfile()
       .then((response) => {
-        setUser(response.data);
+        console.log(response);
+        setUser(response);
       })
       .catch((e) => {
         console.error(e.message);

@@ -81,7 +81,7 @@ const service = {
 
   getOneProfile() {
     return service
-      .get("/api/profile/profile")
+      .get("/api/profile")
       .then((res) => res.data)
       .catch(errorHandler);
   },
