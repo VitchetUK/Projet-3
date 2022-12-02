@@ -37,7 +37,7 @@ ul {
   flex-direction: row;
   justify-content: left;
   max-width: 80%;
-  margin-left: 10%;
+  margin: 5rem 0 0 10%;
   /* margin-top: 15px; */
   /* background-color: #b0a8b9; */
   background-color: #fcfcfcff;
