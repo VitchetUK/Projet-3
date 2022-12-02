@@ -22,7 +22,7 @@ const OneMusician = () => {
 
   return (
     <div>
-      <Link to={`${musician.user}`}>Contact them</Link>
+      <Link to={`/contact/musicians/${musician._id}`}>Contact them</Link>
       <p>{musician.instruments}</p>
       <p>{musician.musicStyle}</p>
       <p>{musician.city}</p>
