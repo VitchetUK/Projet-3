@@ -2,26 +2,52 @@ import React, { useState } from "react";
 import useForm from "../../hooks/useForm";
 import apiHandler from "../../api/apiHandler";
 import { useNavigate } from "react-router-dom";
+import useAuth from "../../auth/useAuth";
 
 const FormEditProfile = () => {
+  const { currentUser, authenticateUser } = useAuth();
+  console.log(currentUser);
   const [values, handleChange] = useForm({
-    name: "",
-    username: "",
-    email: "",
-    phone: "",
-    age: "",
-    twitter: "",
-    instagram: "",
-    displayEmail: "",
+    name: currentUser.name,
+    username: currentUser.username,
+    phone: currentUser.phone,
+    age: currentUser.age,
+    twitter: currentUser.twitter,
+    instagram: currentUser.instagram,
+    displayEmail: currentUser.displayEmail,
+    picture: currentUser.picture,
   });
   const [error, setError] = useState(null);
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const fd = new FormData();
+    // fd.append("name", values.name);
+    // fd.append("username", values.username);
+    // fd.append("phone", values.phone);
+    // fd.append("age", values.age);
+    // fd.append("twitter", values.twitter);
+    // fd.append("instagram", values.instagram);
+    // fd.append("displayEmail", values.displayEmail);
+    // fd.append("picture", values.picture);
+
+    // for (const key in values) {
+    //   fd.apppend(key, values[key]);
+    // }
+
+    for (const key in values) {
+      fd.append(key, values[key]);
+
+      if (values[key] === "") {
+        return setError({ message: "All fields are required" });
+      }
+    }
+
     apiHandler
       .updateProfile(values)
-      .then(() => {
+      .then(async () => {
+        await authenticateUser();
         navigate("/profile");
       })
       .catch((e) => {
@@ -49,14 +75,6 @@ const FormEditProfile = () => {
           name="username"
           onChange={handleChange}
           value={values.username}
-        />
-        <label htmlFor="email">email</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          onChange={handleChange}
-          value={values.email}
         />
         <label htmlFor="phone">phone</label>
         <input
@@ -97,6 +115,15 @@ const FormEditProfile = () => {
           name="displayEmail"
           onChange={handleChange}
           value={values.displayEmail}
+        />
+        <label htmlFor="picture">Picture</label>
+        <input
+          type="file"
+          id="picture"
+          name="picture"
+          // value={picture.name || ""}
+          onChange={handleChange}
+          //   value={values.picture || ""}
         />
         <button>Submit</button>
       </form>

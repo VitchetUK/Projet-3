@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, NavLink } from "react-router-dom";
 import service from "../api/apiHandler";
 
 const Profile = () => {
@@ -23,14 +23,20 @@ const Profile = () => {
 
   return (
     <>
-      <input type="email" id="email" name="email" value={user.email} />
-      <label htmlFor="username">username</label>
-      <input
-        type="string"
-        id="username"
-        name="username"
-        value={user.username}
-      />
+      <div>
+        <img src={user.picture} alt="" />
+      </div>
+      <ul>
+        <li>{user.name}</li>
+        <li>{user.username}</li>
+        <li>{user.phone}</li>
+        <li>{user.age}</li>
+        <li>{user.twitter}</li>
+        <li>{user.instagram}</li>
+        <li>{user.displayEmail}</li>
+      </ul>
+
+      <NavLink to="/profile/edit">Edit</NavLink>
     </>
   );
 };
