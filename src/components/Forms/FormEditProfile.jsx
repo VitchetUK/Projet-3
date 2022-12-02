@@ -45,7 +45,7 @@ const FormEditProfile = () => {
     }
 
     apiHandler
-      .updateProfile(values)
+      .updateProfile(fd)
       .then(async () => {
         await authenticateUser();
         navigate("/profile");
