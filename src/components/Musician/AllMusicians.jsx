@@ -23,6 +23,7 @@ const AllMusicians = () => {
           return (
             <div className="onePostDiv" key={element._id}>
               <Link to={`${element._id}`}>clique</Link>
+              <img className="profilePic" src={element.user.picture} alt="" />
               <p>{element.instruments}</p>
               <p>{element.musicStyle}</p>
               <p>{element.city}</p>

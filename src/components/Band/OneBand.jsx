@@ -26,6 +26,8 @@ const OneBand = () => {
 
       <div className="searchDiv"></div>
       <div className="oneBandId">
+        <img className="profilePic" src={band.user.picture} alt="" />
+
         <p>
           {band.user.name}'s search: {band.searchedMusician}
         </p>

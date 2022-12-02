@@ -29,9 +29,9 @@ const FormMusician = () => {
   };
 
   return (
-    <>
+    <div className="container">
       {error && <h3 className="error">{error.message}</h3>}
-      <form onSubmit={handleSubmit}>
+      <form className="form" onSubmit={handleSubmit}>
         <h2>Create a request</h2>
         <label htmlFor="instruments">instruments</label>
         <input
@@ -83,7 +83,7 @@ const FormMusician = () => {
         />
         <button>Submit</button>
       </form>
-    </>
+    </div>
   );
 };
 

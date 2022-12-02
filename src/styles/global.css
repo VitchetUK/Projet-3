@@ -67,3 +67,57 @@ a {
 .oneBandId {
   margin-left: 4rem;
 }
+
+body.homePageBackground {
+  background-image: url("../public/vishnu-r-nair-m1WZS5ye404-unsplash.jpg");
+  background-size: cover;
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  gap: 1rem;
+  align-items: center;
+  /* background-color: rgb(255, 110, 110); */
+  box-shadow: 0px 4px 8px rgba(41, 41, 41, 0.08);
+  border-radius: 50px;
+  background-color: white;
+  height: 65vh;
+  width: 40vw;
+  margin: 10vh 0;
+}
+
+/* .formInput {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+} */
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  box-sizing: border-box;
+  color: grey;
+
+  background: white;
+  height: 3rem;
+  width: 10rem;
+  border: 3px solid #fcaf9f;
+
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+button:hover {
+  box-shadow: 5px 5px #ebfdf8;
+}
+
+.profilePic {
+  max-width: 500px;
+}

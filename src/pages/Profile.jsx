@@ -24,7 +24,7 @@ const Profile = () => {
   return (
     <>
       <div>
-        <img src={user.picture} alt="" />
+        <img className="profilePic" src={user.picture} alt="" />
       </div>
       <ul>
         <li>{user.name}</li>
