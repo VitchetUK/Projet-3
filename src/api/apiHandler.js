@@ -88,7 +88,7 @@ const service = {
 
   updateProfile(reqInfo) {
     return service
-      .post("/api/profile", reqInfo)
+      .patch("/api/profile", reqInfo)
       .then((res) => res.data)
       .catch(errorHandler);
   },
