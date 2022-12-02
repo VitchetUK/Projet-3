@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import service from "../../api/apiHandler";
 
 const OneBand = () => {
@@ -22,10 +22,13 @@ const OneBand = () => {
   // return <pre>{JSON.stringify(band, null, 2)}</pre>;
   return (
     <>
+      <Link to={`/contact/bands/${band._id}`}>Contact them</Link>
+
       <div className="searchDiv"></div>
       <div className="oneBandId">
-        {/* <p>{band.name} is loking for:</p> */}
-        <p>{band.searchedMusician}</p>
+        <p>
+          {band.user.name}'s search: {band.searchedMusician}
+        </p>
         <p>{band.musicStyle}</p>
         <p>{band.city}</p>
         <p>{band.description}</p>

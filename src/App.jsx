@@ -13,6 +13,7 @@ import OneMusician from "./components/Musician/OneMusician";
 import FormBand from "./components/Forms/FormBand";
 import FormMusician from "./components/Forms/FormMusician";
 import FormEditProfile from "./components/Forms/FormEditProfile";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
@@ -47,6 +48,7 @@ function App() {
         <Route element={<PrivateRoute />}>
           {/* All routes after the PrivateRoute require the user to be loggedIn !!*/}
           <Route path="/profile" element={<Profile />} />
+          <Route path="/contact/:category/:id" element={<Contact />} />
           <Route path="/profile/edit" element={<FormEditProfile />} />
         </Route>
       </Routes>
