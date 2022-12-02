@@ -27,12 +27,15 @@ const FormBand = () => {
   };
 
   return (
-    <>
+    <div className="container">
       {error && <h3 className="error">{error.message}</h3>}
-      <form onSubmit={handleSubmit}>
+      <form className="form" onSubmit={handleSubmit}>
         <h2>Create a request for your band</h2>
-        <label htmlFor="searchedMusician">searchedMusician</label>
+        <label className="formInput" htmlFor="searchedMusician">
+          searchedMusician
+        </label>
         <input
+          className="formInput"
           type="string"
           id="searchedMusician"
           name="searchedMusician"
@@ -41,6 +44,7 @@ const FormBand = () => {
         />
         <label htmlFor="musicStyle">musicStyle</label>
         <input
+          className="formInput"
           type="string"
           id="musicStyle"
           name="musicStyle"
@@ -49,6 +53,7 @@ const FormBand = () => {
         />
         <label htmlFor="city">city</label>
         <input
+          className="formInput"
           type="string"
           id="city"
           name="city"
@@ -57,6 +62,7 @@ const FormBand = () => {
         />
         <label htmlFor="description">description</label>
         <input
+          className="formInput"
           type="string"
           id="description"
           name="description"
@@ -65,6 +71,7 @@ const FormBand = () => {
         />
         <label htmlFor="availability">availability</label>
         <input
+          className="formInput"
           type="availability"
           id="availability"
           name="availability"
@@ -73,7 +80,7 @@ const FormBand = () => {
         />
         <button>Submit</button>
       </form>
-    </>
+    </div>
   );
 };
 
