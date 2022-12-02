@@ -93,6 +93,13 @@ const service = {
       .catch(errorHandler);
   },
 
+  getAllRequests() {
+    return service
+      .get("/api/userReq")
+      .then((res) => res.data)
+      .catch(errorHandler);
+  },
+
   // getAllTheCats() {
   // 	return service
   // 		.get("/api/cats")

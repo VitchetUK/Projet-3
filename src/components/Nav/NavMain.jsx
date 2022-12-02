@@ -27,6 +27,9 @@ const NavMain = () => {
               <NavLink to="/allMusicians/create">Musicians Form</NavLink>
             </li>
             <li>
+              <NavLink to="/myRequests">My requests</NavLink>
+            </li>
+            <li>
               <NavLink to="/profile">
                 {/* Hi {currentUser && currentUser.name} */}
                 my profile
