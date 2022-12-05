@@ -9,7 +9,7 @@ const NavMain = () => {
       <ul className="ulNav">
         <li>
           <NavLink className="logo" to="/">
-            muSeek
+            <img className="logoImg" src="public/logo museek.png" alt="" />
           </NavLink>
         </li>
         {isLoggedIn && (
