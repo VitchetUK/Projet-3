@@ -24,27 +24,33 @@ const AllBands = () => {
     <>
       <div className="searchDiv"></div>
       <div className="allPostsDiv">
-        {bands.map((element) => {
-          return (
-            <div className="onePostDiv" key={element._id}>
-              <div className="imgLinkDiv">
-                <Link to={`${element._id}`}>
-                  <img
-                    className="profilePic"
-                    src={element.user.picture}
-                    alt=""
-                  />
-                </Link>
+        {bands
+          .filter((musicians) =>
+            musicians.instruments
+              .toLowerCase()
+              .includes(searchString.toLowerCase())
+          )
+          .map((element) => {
+            return (
+              <div className="onePostDiv" key={element._id}>
+                <div className="imgLinkDiv">
+                  <Link to={`${element._id}`}>
+                    <img
+                      className="profilePic"
+                      src={element.user.picture}
+                      alt=""
+                    />
+                  </Link>
+                </div>
+                <p className="onePostName">{element.user.name}</p>
+                <div className="onePostInfo">
+                  <p>genre: {element.musicStyle}</p>
+                  <p>looking for: {element.searchedMusician}</p>
+                  <p>location: {element.city}</p>
+                </div>
               </div>
-              <p className="onePostName">{element.user.name}</p>
-              <div className="onePostInfo">
-                <p>genre: {element.musicStyle}</p>
-                <p>looking for: {element.searchedMusician}</p>
-                <p>location: {element.city}</p>
-              </div>
-            </div>
-          );
-        })}
+            );
+          })}
       </div>
     </>
   );
