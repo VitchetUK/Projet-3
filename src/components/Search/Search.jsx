@@ -7,8 +7,10 @@ const Search = ({ searchString, setSearchString }) => {
 
   return (
     <>
-      <p>Search</p>
-      <input type="search" value={searchString} onChange={handleSearch} />;
+      <div className="searchDiv">
+        <p>Search</p>
+        <input type="search" value={searchString} onChange={handleSearch} />
+      </div>
     </>
   );
 };

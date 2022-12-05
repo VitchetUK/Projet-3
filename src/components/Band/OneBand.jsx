@@ -28,8 +28,6 @@ const OneBand = () => {
   // return <pre>{JSON.stringify(band, null, 2)}</pre>;
   return (
     <>
-      <Link to={`/contact/bands/${band._id}`}>Contact them</Link>
-
       <div className="searchDiv"></div>
       <div className="oneBandId">
         <img className="profilePic" src={band.user.picture} alt="" />
@@ -41,6 +39,11 @@ const OneBand = () => {
         <p>{band.city}</p>
         <p>{band.description}</p>
         <p>{band.availability}</p>
+        <button className="oneReqBtn">
+          <Link className="oneReqLinks" to={`/contact/bands/${band._id}`}>
+            Contact {band.user.name}
+          </Link>
+        </button>
       </div>
     </>
   );

@@ -128,7 +128,24 @@ a {
   margin-left: 4rem;
 }
 
-body.homePageBackground {
+.oneReqLinks {
+  color: white;
+  font-weight: bolder;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.oneReqBtn {
+  border-radius: 50px;
+  border: 3px solid #ebfdf8;
+  background: #fcaf9f;
+  width: 10vw;
+  height: 50px;
+  margin-top: 1rem;
+  transition: all 0.5s ease;
+}
+
+.homePageBackground {
   background-image: url("../caleb-george-pH88tHG-1yw-unsplash3.jpg");
   background-size: cover;
   margin-top: 5px;
@@ -138,6 +155,7 @@ body.homePageBackground {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  height: 100vh;
 }
 
 .homePageLinksDivs {
@@ -146,9 +164,24 @@ body.homePageBackground {
 }
 
 .homePageLinks {
-  color: rgb(230, 115, 115);
-  border: 3px solid white;
+  color: white;
+  font-weight: bolder;
   border-radius: 10px;
+  cursor: pointer;
+}
+
+.homePageBtn {
+  border-radius: 50px;
+  border: 3px solid #ebfdf8;
+  background: #fcaf9f;
+  width: 15vw;
+  height: 70px;
+  margin-top: 1rem;
+  transition: all 0.5s ease;
+}
+
+.homePageBtn:hover {
+  box-shadow: 5px 5px #ebfdf8;
 }
 
 .form {
@@ -302,8 +335,8 @@ label {
   margin-top: 5rem;
   cursor: pointer;
   transition: all 0.5s ease;
-  padding-left: 10rem;
-  padding-top: 0.6rem;
+  text-align: center;
+  -webkit-box-align: center;
 }
 
 /* body.profilePageBackground {
@@ -313,3 +346,7 @@ label {
   filter: blur(8px);
   -webkit-filter: blur(8px);
 } */
+
+.searchDivElems {
+  display: flex;
+}
