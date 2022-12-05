@@ -38,8 +38,18 @@ const Profile = () => {
             <li>{user.username}</li>
             <li>{user.phone}</li>
             <li>{user.age}</li>
-            <li>{user.twitter}</li>
-            <li>{user.instagram}</li>
+            <li>
+              twitter:{" "}
+              <a href={`https://twitter.com/${user.twitter}`}>
+                @{user.twitter}
+              </a>
+            </li>
+            <li>
+              instagram:{" "}
+              <a href={`https://www.instagram.com/${user.instagram}`}>
+                @{user.instagram}
+              </a>
+            </li>
             <li>{user.displayEmail}</li>
           </ul>
         </div>

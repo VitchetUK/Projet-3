@@ -17,18 +17,32 @@ const Contact = () => {
       });
   }, []);
 
-  if (!contact)
-    return (
-      <div className="spinnerDiv">
-        <div className="spinner"></div>
-      </div>
-    );
-  // return <div className="loading">loading...</div>;
+  if (!contact) return <div className="loading">loading...</div>;
   return (
-    <div>
-      <p>{contact.user.email}</p>
-      <p>{contact.user.name}</p>
-    </div>
+    <>
+      <div>
+        <img src={contact.user.picture} alt="" />
+      </div>
+      <ul>
+        <li>{contact.user.name}</li>
+        <li>{contact.user.username}</li>
+        <li>{contact.user.phone}</li>
+        <li>{contact.user.age}</li>
+        <li>
+          twitter:{" "}
+          <a href={`https://twitter.com/${contact.user.twitter}`}>
+            @{contact.user.twitter}
+          </a>
+        </li>
+        <li>
+          instagram:{" "}
+          <a href={`https://www.instagram.com/${contact.user.instagram}`}>
+            @{contact.user.instagram}
+          </a>
+        </li>
+        <li>{contact.user.displayEmail}</li>
+      </ul>
+    </>
   );
 };
 

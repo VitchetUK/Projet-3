@@ -14,6 +14,7 @@ import FormBand from "./components/Forms/FormBand";
 import FormMusician from "./components/Forms/FormMusician";
 import FormEditProfile from "./components/Forms/FormEditProfile";
 import Contact from "./pages/Contact";
+import MyRequests from "./pages/Myrequests";
 
 function App() {
   return (
@@ -21,35 +22,24 @@ function App() {
       <NavMain />
       <Routes>
         <Route path="/" element={<Home />} />
-
         <Route path="/allBands" element={<AllBands />} />
-
         <Route path="/allBands/:id" element={<OneBand />} />
-
-        <Route path="/allBands/create" element={<FormBand />} />
-
         <Route path="/allMusicians" element={<AllMusicians />} />
-
         <Route path="/allMusicians/:id" element={<OneMusician />} />
 
-        <Route path="/allMusicians/create" element={<FormMusician />} />
-
-        {/*<Route index element={<ListCharacters />} />
-          <Route path=":id" element={<OneBand />} />
-        </Route>
-        <Route path="/allMusiciansRequest" element={<AllMusicians />}>
-          <Route path=":id" element={<OneMusician />} />
-        </Route>
-        {/*<Route index element={<ListCharacters />} /> */}
         <Route element={<LoggedOut />}>
           <Route path="/signin" element={<Signin />} />
           <Route path="/signup" element={<Signup />} />
         </Route>
+
         <Route element={<PrivateRoute />}>
           {/* All routes after the PrivateRoute require the user to be loggedIn !!*/}
           <Route path="/profile" element={<Profile />} />
           <Route path="/contact/:category/:id" element={<Contact />} />
           <Route path="/profile/edit" element={<FormEditProfile />} />
+          <Route path="/allBands/create" element={<FormBand />} />
+          <Route path="/allMusicians/create" element={<FormMusician />} />
+          <Route path="/myRequests" element={<MyRequests />} />
         </Route>
       </Routes>
     </div>
