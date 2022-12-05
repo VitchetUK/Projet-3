@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import service from "../../api/apiHandler";
 import { Link } from "react-router-dom";
+import Search from "../Search/Search";
 
 const AllBands = () => {
   const [bands, setBands] = useState([]);
+  const [searchString, setSearchString] = useState("");
 
   useEffect(() => {
     service.getAllBands().then((data) => {
@@ -22,11 +24,13 @@ const AllBands = () => {
 
   return (
     <>
-      <div className="searchDiv"></div>
+      <div className="searchDiv">
+        <Search {...{ searchString, setSearchString }} />
+      </div>
       <div className="allPostsDiv">
         {bands
-          .filter((musicians) =>
-            musicians.instruments
+          .filter((bands) =>
+            bands.searchedMusician
               .toLowerCase()
               .includes(searchString.toLowerCase())
           )
