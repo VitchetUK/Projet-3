@@ -30,55 +30,66 @@ const FormBand = () => {
     <div className="container">
       {error && <h3 className="error">{error.message}</h3>}
       <form className="form" onSubmit={handleSubmit}>
-        <h2>Create a request for your band</h2>
-        <label className="formInput" htmlFor="searchedMusician">
-          searchedMusician
-        </label>
-        <input
-          className="formInput"
-          type="string"
-          id="searchedMusician"
-          name="searchedMusician"
-          onChange={handleChange}
-          value={values.searchedMusician}
-        />
-        <label htmlFor="musicStyle">musicStyle</label>
-        <input
-          className="formInput"
-          type="string"
-          id="musicStyle"
-          name="musicStyle"
-          onChange={handleChange}
-          value={values.musicStyle}
-        />
-        <label htmlFor="city">city</label>
-        <input
-          className="formInput"
-          type="string"
-          id="city"
-          name="city"
-          onChange={handleChange}
-          value={values.city}
-        />
-        <label htmlFor="description">description</label>
-        <input
-          className="formInput"
-          type="string"
-          id="description"
-          name="description"
-          onChange={handleChange}
-          value={values.description}
-        />
-        <label htmlFor="availability">availability</label>
-        <input
-          className="formInput"
-          type="availability"
-          id="availability"
-          name="availability"
-          onChange={handleChange}
-          value={values.availability}
-        />
-        <button>Submit</button>
+        <h2>Your band needs a new member? Create a request!</h2>
+
+        <div className="labelInput">
+          <label className="formInput" htmlFor="searchedMusician">
+            Searched Musician:
+          </label>
+          <input
+            className="formInput"
+            type="string"
+            id="searchedMusician"
+            name="searchedMusician"
+            onChange={handleChange}
+            value={values.searchedMusician}
+          />
+        </div>
+        <div className="labelInput">
+          <label htmlFor="musicStyle">Music Style:</label>
+          <input
+            className="formInput"
+            type="string"
+            id="musicStyle"
+            name="musicStyle"
+            onChange={handleChange}
+            value={values.musicStyle}
+          />
+        </div>
+        <div className="labelInput">
+          <label htmlFor="city">City:</label>
+          <input
+            className="formInput"
+            type="string"
+            id="city"
+            name="city"
+            onChange={handleChange}
+            value={values.city}
+          />
+        </div>
+        <div className="labelInput">
+          <label htmlFor="description">Description:</label>
+          <input
+            className="formInput"
+            type="string"
+            id="description"
+            name="description"
+            onChange={handleChange}
+            value={values.description}
+          />
+        </div>
+        <div className="labelInput">
+          <label htmlFor="availability">Availability:</label>
+          <input
+            className="formInput"
+            type="availability"
+            id="availability"
+            name="availability"
+            onChange={handleChange}
+            value={values.availability}
+          />
+        </div>
+        <button className="formBtn">Submit</button>
       </form>
     </div>
   );

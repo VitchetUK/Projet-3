@@ -18,7 +18,13 @@ const OneMusician = () => {
       });
   }, []);
 
-  if (!musician) return <div className="loading">Loading...</div>;
+  if (!musician)
+    return (
+      <div className="spinnerDiv">
+        <div className="spinner"></div>
+      </div>
+    );
+  // return <div className="loading">Loading...</div>;
 
   return (
     <div>

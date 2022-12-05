@@ -1,9 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
@@ -18,10 +19,56 @@ a {
 	text-decoration: none;
 	color: inherit;
 }
+*/
 
 ul {
-	list-style-type: none;
-} */
+  list-style-type: none;
+}
+
+.logoImg {
+  height: 3rem;
+  margin: -2;
+  padding: -2;
+  display: inline;
+}
+
+.spinnerDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.spinner {
+  width: 56px;
+  height: 56px;
+  display: grid;
+  border: 4.5px solid #0000;
+  border-radius: 50%;
+  border-right-color: #fcaf9f;
+  animation: spinner-a4dj62 1s infinite linear;
+}
+
+.spinner::before,
+.spinner::after {
+  content: "";
+  grid-area: 1/1;
+  margin: 2.2px;
+  border: inherit;
+  border-radius: 50%;
+  animation: spinner-a4dj62 2s infinite;
+}
+
+.spinner::after {
+  margin: 8.9px;
+  animation-duration: 3s;
+}
+
+@keyframes spinner-a4dj62 {
+  100% {
+    transform: rotate(1turn);
+  }
+}
 
 .searchDiv {
   height: 4rem;
@@ -36,12 +83,12 @@ ul {
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: left;
-  max-width: 80%;
-  margin: 5rem 0 0 10%;
+  max-width: 85%;
+  margin: 0.2rem 0 0 7.5%;
   /* margin-top: 15px; */
   /* background-color: #b0a8b9; */
   background-color: #fcfcfcff;
-  border-left: 3px solid #ff8066;
+  /* border-left: 3px solid #ff8066; */
   /* box-shadow: 20px 0 20px -10px rgb(211, 210, 210),
     -20px 0 20px -10px rgb(211, 210, 210); */
 }
@@ -49,14 +96,27 @@ ul {
 .onePostDiv {
   display: inline-flex;
   flex-direction: column;
-  justify-content: center;
-  margin: 2rem;
-  margin-top: 4rem;
-  padding: 1rem;
-  min-width: 20%;
-  border-top: 3px solid #fcaf9f;
-  border-radius: 5px;
+  /* justify-content: center; */
+  margin: 1.5rem 3.1rem 0 1.9rem;
+  /* padding: 1rem; */
+  /* min-width: 20%; */
+  border-top: 4px solid #fcaf9f;
+  border-radius: 12px;
   background-color: white;
+  box-shadow: 0px 4px 8px rgba(41, 41, 41, 0.08);
+}
+
+.onePostName {
+  font-size: 1.2rem;
+  font-weight: 900;
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+  color: #472d30;
+}
+
+.onePostInfo {
+  margin: 0.5rem 0 1rem 2rem;
+  color: grey;
 }
 
 a {
@@ -69,8 +129,9 @@ a {
 }
 
 body.homePageBackground {
-  background-image: url("../public/vishnu-r-nair-m1WZS5ye404-unsplash.jpg");
+  background-image: url("../public/caleb-george-pH88tHG-1yw-unsplash3.jpg");
   background-size: cover;
+  margin-top: 5px;
 }
 
 .form {
@@ -79,15 +140,57 @@ body.homePageBackground {
   flex-direction: column;
   justify-content: center;
   position: absolute;
-  gap: 1rem;
+  /* gap: 1rem; */
   align-items: center;
   /* background-color: rgb(255, 110, 110); */
   box-shadow: 0px 4px 8px rgba(41, 41, 41, 0.08);
   border-radius: 50px;
   background-color: white;
-  height: 65vh;
-  width: 40vw;
-  margin: 10vh 0;
+  height: 75vh;
+  width: 35vw;
+  margin: 7vh 0;
+}
+.formSignLog {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  align-items: center;
+  box-shadow: 0px 4px 8px rgba(41, 41, 41, 0.08);
+  border-radius: 50px;
+  background-color: white;
+  height: 50vh;
+  width: 35vw;
+  margin: 15vh 0;
+}
+
+h2 {
+  margin-bottom: 2rem;
+}
+
+.labelInput {
+  display: flex;
+  flex-direction: column;
+}
+
+input,
+select {
+  margin-bottom: 1rem;
+  width: 20vw;
+  height: 50px;
+  border: 1px solid lightgrey;
+  border-radius: 8px;
+}
+
+input:focus {
+  outline: none;
+  border: 1.6px solid lightgrey;
+  border-radius: 8px;
+}
+
+label {
+  margin-bottom: 0.2rem;
 }
 
 /* .formInput {
@@ -101,23 +204,92 @@ body.homePageBackground {
   justify-content: center;
 }
 
-button {
-  box-sizing: border-box;
-  color: grey;
-
-  background: white;
-  height: 3rem;
-  width: 10rem;
-  border: 3px solid #fcaf9f;
-
+.formBtn {
+  /* box-sizing: border-box; */
+  color: white;
+  font-weight: bolder;
+  border-radius: 50px;
+  border: none;
+  background: #fcaf9f;
+  width: 20vw;
+  height: 50px;
+  margin-top: 1rem;
   cursor: pointer;
   transition: all 0.5s ease;
 }
 
-button:hover {
-  box-shadow: 5px 5px #ebfdf8;
+.formBtn:hover,
+.formBtnEdit:hover {
+  box-shadow: 5px 5px #cef9ed;
+}
+
+.imgLinkDiv {
+  max-height: 200px;
+  max-width: 300px;
+  margin: 0;
+  padding: 0;
 }
 
 .profilePic {
-  max-width: 500px;
+  object-fit: cover;
+  object-position: 0 0;
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
+
+.profilePageDiv {
+  display: flex;
+  justify-content: center;
+  padding-top: 10rem;
+  width: 40vw;
+  margin-left: 30vw;
+  /* position: absolute; */
+}
+
+.profilePicPageDiv {
+  margin-right: 2rem;
+  width: 10vw;
+  border-right: 1px solid lightgrey;
+  height: 200px;
+  width: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.profilePicPage {
+  width: 200px;
+}
+
+.profileInfo {
+  margin-left: 2rem;
+}
+
+.profileEditDiv {
+  display: flex;
+  justify-content: center;
+}
+
+.formBtnEdit {
+  color: white;
+  font-weight: bolder;
+  border-radius: 50px;
+  border: none;
+  background: #fcaf9f;
+  width: 20vw;
+  height: 50px;
+  margin-top: 5rem;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  padding-left: 10rem;
+  padding-top: 0.6rem;
+}
+
+/* body.profilePageBackground {
+  background-image: url("../public/caleb-george-pH88tHG-1yw-unsplash3.jpg");
+  background-size: cover;
+  margin-top: 5px;
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+} */

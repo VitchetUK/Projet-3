@@ -12,7 +12,12 @@ const AllBands = () => {
   }, []);
 
   if (!bands.length) {
-    return <div className="loading">Loading...</div>;
+    // return <div className="loading">Loading...</div>;
+    return (
+      <div className="spinnerDiv">
+        <div className="spinner"></div>
+      </div>
+    );
   }
 
   return (
@@ -22,11 +27,21 @@ const AllBands = () => {
         {bands.map((element) => {
           return (
             <div className="onePostDiv" key={element._id}>
-              <Link to={`${element._id}`}>clique ici</Link>
-              <img className="profilePic" src={element.user.picture} alt="" />
-              <p>Music Style: {element.musicStyle}</p>
-              <p>Looking for: {element.searchedMusician}</p>
-              <p>City: {element.city}</p>
+              <div className="imgLinkDiv">
+                <Link to={`${element._id}`}>
+                  <img
+                    className="profilePic"
+                    src={element.user.picture}
+                    alt=""
+                  />
+                </Link>
+              </div>
+              <p className="onePostName">{element.user.name}</p>
+              <div className="onePostInfo">
+                <p>genre: {element.musicStyle}</p>
+                <p>looking for: {element.searchedMusician}</p>
+                <p>location: {element.city}</p>
+              </div>
             </div>
           );
         })}

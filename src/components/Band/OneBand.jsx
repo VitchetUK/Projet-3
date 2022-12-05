@@ -17,7 +17,13 @@ const OneBand = () => {
       });
   }, []);
 
-  if (!band) return <div className="loading">Loading...</div>;
+  if (!band)
+    return (
+      <div className="spinnerDiv">
+        <div className="spinner"></div>
+      </div>
+    );
+  // return <div className="loading">Loading...</div>;
 
   // return <pre>{JSON.stringify(band, null, 2)}</pre>;
   return (

@@ -17,7 +17,13 @@ const Contact = () => {
       });
   }, []);
 
-  if (!contact) return <div className="loading">loading...</div>;
+  if (!contact)
+    return (
+      <div className="spinnerDiv">
+        <div className="spinner"></div>
+      </div>
+    );
+  // return <div className="loading">loading...</div>;
   return (
     <div>
       <p>{contact.user.email}</p>

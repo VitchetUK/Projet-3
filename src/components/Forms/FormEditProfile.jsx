@@ -56,78 +56,94 @@ const FormEditProfile = () => {
   };
 
   return (
-    <>
+    <div className="container">
       {error && <h3 className="error">{error.message}</h3>}
-      <form onSubmit={handleSubmit}>
+      <form className="form" onSubmit={handleSubmit}>
         <h2>Update your profile</h2>
-        <label htmlFor="name">name</label>
-        <input
-          type="string"
-          id="name"
-          name="name"
-          onChange={handleChange}
-          value={values.name}
-        />
-        <label htmlFor="username">username</label>
-        <input
-          type="string"
-          id="username"
-          name="username"
-          onChange={handleChange}
-          value={values.username}
-        />
-        <label htmlFor="phone">phone</label>
-        <input
-          type="number"
-          id="phone"
-          name="phone"
-          onChange={handleChange}
-          value={values.phone}
-        />
-        <label htmlFor="age">age</label>
-        <input
-          type="number"
-          id="age"
-          name="age"
-          onChange={handleChange}
-          value={values.age}
-        />
-        <label htmlFor="twitter">twitter</label>
-        <input
-          type="string"
-          id="twitter"
-          name="twitter"
-          onChange={handleChange}
-          value={values.twitter}
-        />
-        <label htmlFor="instagram">instagram</label>
-        <input
-          type="string"
-          id="instagram"
-          name="instagram"
-          onChange={handleChange}
-          value={values.instagram}
-        />
-        <label htmlFor="displayEmail">displayEmail</label>
-        <input
-          type="email"
-          id="displayEmail"
-          name="displayEmail"
-          onChange={handleChange}
-          value={values.displayEmail}
-        />
-        <label htmlFor="picture">Picture</label>
-        <input
-          type="file"
-          id="picture"
-          name="picture"
-          // value={picture.name || ""}
-          onChange={handleChange}
-          //   value={values.picture || ""}
-        />
+        <div className="labelInput">
+          <label htmlFor="name">name</label>
+          <input
+            type="string"
+            id="name"
+            name="name"
+            onChange={handleChange}
+            value={values.name}
+          />
+        </div>
+        <div className="labelInput">
+          <label htmlFor="username">username</label>
+          <input
+            type="string"
+            id="username"
+            name="username"
+            onChange={handleChange}
+            value={values.username}
+          />
+        </div>
+        <div className="labelInput">
+          <label htmlFor="phone">phone</label>
+          <input
+            type="number"
+            id="phone"
+            name="phone"
+            onChange={handleChange}
+            value={values.phone}
+          />
+        </div>
+        <div className="labelInput">
+          <label htmlFor="age">age</label>
+          <input
+            type="number"
+            id="age"
+            name="age"
+            onChange={handleChange}
+            value={values.age}
+          />
+        </div>
+        <div className="labelInput">
+          <label htmlFor="twitter">twitter</label>
+          <input
+            type="string"
+            id="twitter"
+            name="twitter"
+            onChange={handleChange}
+            value={values.twitter}
+          />
+        </div>
+        <div className="labelInput">
+          <label htmlFor="instagram">instagram</label>
+          <input
+            type="string"
+            id="instagram"
+            name="instagram"
+            onChange={handleChange}
+            value={values.instagram}
+          />
+        </div>
+        <div className="labelInput">
+          <label htmlFor="displayEmail">displayEmail</label>
+          <input
+            type="email"
+            id="displayEmail"
+            name="displayEmail"
+            onChange={handleChange}
+            value={values.displayEmail}
+          />
+        </div>
+        <div className="labelInput">
+          <label htmlFor="picture">Picture</label>
+          <input
+            type="file"
+            id="picture"
+            name="picture"
+            // value={picture.name || ""}
+            onChange={handleChange}
+            //   value={values.picture || ""}
+          />
+        </div>
         <button>Submit</button>
       </form>
-    </>
+    </div>
   );
 };
 
