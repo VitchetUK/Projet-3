@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
-    <body className="homePageBackground">
+    <div className="homePageBackground">
       <div className="homePageDiv">
         <div className="homePageLinksDivs">
           <button className="formBtn">
@@ -20,7 +20,7 @@ const Home = () => {
           </button>
         </div>
       </div>
-    </body>
+    </div>
   );
 };
 
