@@ -95,7 +95,7 @@ const service = {
 
   getAllRequests() {
     return service
-      .get("/api/userReq")
+      .get("/api/myRequests")
       .then((res) => res.data)
       .catch(errorHandler);
   },
