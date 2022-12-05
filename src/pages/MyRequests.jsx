@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import service from "../api/apiHandler";
+import { Link } from "react-router-dom";
 
 const MyRequests = () => {
   const [requests, setRequests] = useState({});
@@ -30,9 +31,24 @@ const MyRequests = () => {
         {requests.musicians.map((element) => {
           return (
             <React.Fragment key={element._id}>
-              <div>
-                <p>id: {element._id}</p>
-                <p>{element.city}</p>
+              <div className="onePostDiv">
+                <div className="imgLinkDiv">
+                  <Link to={`${element._id}`}>
+                    <img
+                      className="profilePic"
+                      src={element.user.picture}
+                      alt=""
+                    />
+                  </Link>
+                </div>
+                <p className="onePostName">{element.user.name}</p>
+                <div className="onePostInfo">
+                  <p>instruments: {element.instruments}</p>
+                  <p>genre: {element.musicStyle}</p>
+                  <p>location: {element.city}</p>
+                  <p>experience: {element.experience}</p>
+                  <p>availability: {element.availability}</p>
+                </div>
               </div>
             </React.Fragment>
           );
@@ -43,9 +59,22 @@ const MyRequests = () => {
         {requests.bands.map((element) => {
           return (
             <React.Fragment key={element._id}>
-              <div>
-                <p>id: {element._id}</p>
-                <p>{element.city}</p>
+              <div className="onePostDiv">
+                <div className="imgLinkDiv">
+                  <Link to={`${element._id}`}>
+                    <img
+                      className="profilePic"
+                      src={element.user.picture}
+                      alt=""
+                    />
+                  </Link>
+                </div>
+                <p className="onePostName">{element.user.name}</p>
+                <div className="onePostInfo">
+                  <p>genre: {element.musicStyle}</p>
+                  <p>looking for: {element.searchedMusician}</p>
+                  <p>location: {element.city}</p>
+                </div>
               </div>
             </React.Fragment>
           );

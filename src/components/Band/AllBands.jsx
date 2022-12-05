@@ -25,6 +25,7 @@ const AllBands = () => {
   return (
     <>
       <div className="searchDiv">
+        <p>Search band zone</p>
         <Search {...{ searchString, setSearchString }} />
       </div>
       <div className="allPostsDiv">
