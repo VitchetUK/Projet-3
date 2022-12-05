@@ -9,6 +9,7 @@ const NavMain = () => {
       <ul className="ulNav">
         <li>
           <NavLink className="logo" to="/">
+
             <img className="logoImg" src="/logo-museek.png" alt="" />
           </NavLink>
         </li>
