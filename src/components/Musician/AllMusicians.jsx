@@ -25,6 +25,7 @@ const AllMusicians = () => {
   return (
     <>
       <div className="searchDiv">
+        <p>Search musi zone</p>
         <Search {...{ searchString, setSearchString }} />
       </div>
       <div className="allPostsDiv">
