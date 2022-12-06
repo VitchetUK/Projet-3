@@ -8,7 +8,7 @@ const AllBands = () => {
   const [searchString, setSearchString] = useState("");
   const [citySearchString, setCitySearchString] = useState("");
   const [musicStyleString, setMusicStyleString] = useState("");
-
+  console.log(bands);
   useEffect(() => {
     // Calling the query used to filter in the search bar
 
