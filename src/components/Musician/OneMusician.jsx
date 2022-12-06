@@ -24,7 +24,6 @@ const OneMusician = () => {
         <div className="spinner"></div>
       </div>
     );
-  // return <div className="loading">Loading...</div>;
 
   return (
     <>
@@ -47,7 +46,6 @@ const OneMusician = () => {
       </div>
     </>
   );
-  // return <pre>{JSON.stringify(musician, null, 2)}</pre>;
 };
 
 export default OneMusician;

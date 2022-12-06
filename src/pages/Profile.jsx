@@ -32,7 +32,6 @@ const Profile = () => {
   };
 
   if (!user) {
-    // return <div className="loading">Loading...</div>;
     return (
       <div className="spinnerDiv">
         <div className="spinner"></div>

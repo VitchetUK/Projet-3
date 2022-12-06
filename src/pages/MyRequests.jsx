@@ -14,7 +14,6 @@ const MyRequests = () => {
   }, []);
 
   if (Object.entries(requests).length === 0) {
-    // return <div className="loading">Loading...</div>;
     return (
       <>
         <div>no requests here</div>
@@ -43,7 +42,7 @@ const MyRequests = () => {
                 >
                   CLICK HERE TO DELETE
                 </button>
-                <Link to={`oneMusician/${element._id}`}>
+                <Link to={`one-musician/${element._id}`}>
                   <img
                     className="profilePic"
                     src={element.user.picture}
@@ -79,7 +78,7 @@ const MyRequests = () => {
                 CLICK HERE TO DELETE
               </button>
               <div className="imgLinkDiv">
-                <Link to={`oneBand/${element._id}`}>
+                <Link to={`one-band/${element._id}`}>
                   <img
                     className="profilePic"
                     src={element.user.picture}
