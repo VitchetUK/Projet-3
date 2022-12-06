@@ -37,7 +37,10 @@ const OneMusician = () => {
         <p>{musician.experience}</p>
         <p>{musician.description}</p>
         <button className="oneReqBtn">
-          <Link className="oneReqLinks" to={`/contact/bands/${musician._id}`}>
+          <Link
+            className="oneReqLinks"
+            to={`/contact/musicians/${musician._id}`}
+          >
             Contact {musician.user.name}
           </Link>
         </button>

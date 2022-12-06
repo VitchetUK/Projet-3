@@ -39,9 +39,9 @@ const FormEditProfile = () => {
     for (const key in values) {
       fd.append(key, values[key]);
 
-      if (values[key] === "") {
-        return setError({ message: "All fields are required" });
-      }
+      // if (values[key] === "") {
+      //   return setError({ message: "All fields are required" });
+      // }
     }
 
     apiHandler
