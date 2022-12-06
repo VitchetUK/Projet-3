@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import service from "../../api/apiHandler";
+import Card from "../Card/Card";
 import Search from "../Search/Search";
 
 const AllMusicians = () => {
@@ -54,7 +55,9 @@ const AllMusicians = () => {
               .includes(searchString.toLowerCase())
           ) */}
         {musicians.map((element) => {
-          return (
+          return <Card {...element} />;
+          {
+            /* return (
             <div className="onePostDiv" key={element._id}>
               <div className="imgLinkDiv">
                 <Link to={`${element._id}`}>
@@ -67,14 +70,15 @@ const AllMusicians = () => {
               </div>
               <p className="onePostName">{element.user.name}</p>
               <div className="onePostInfo">
-                <p>instruments: {element.instruments}</p>
-                <p>musicStyle: {element.musicStyle}</p>
-                <p>city: {element.city}</p>
-                <p>experience: {element.experience}</p>
-                <p>availability: {element.availability}</p>
+                <p>Instruments: {element.instruments}</p>
+                <p>Music Style: {element.musicStyle}</p>
+                <p>City: {element.city}</p>
+                <p>Experience: {element.experience}</p>
+                <p>Availability: {element.availability}</p>
               </div>
             </div>
-          );
+          ); */
+          }
         })}
       </div>
     </>

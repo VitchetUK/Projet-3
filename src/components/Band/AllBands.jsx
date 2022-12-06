@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import service from "../../api/apiHandler";
 import { Link } from "react-router-dom";
 import Search from "../Search/Search";
+import Card from "../Card/Card";
 
 const AllBands = () => {
   const [bands, setBands] = useState(null);
@@ -50,7 +51,9 @@ const AllBands = () => {
       </div>
       <div className="allPostsDiv">
         {bands.map((element) => {
-          return (
+          return <Card {...element} />;
+          {
+            /* return (
             <div className="onePostDiv" key={element._id}>
               <div className="imgLinkDiv">
                 <Link to={`${element._id}`}>
@@ -63,12 +66,13 @@ const AllBands = () => {
               </div>
               <p className="onePostName">{element.user.name}</p>
               <div className="onePostInfo">
-                <p>musicStyle: {element.musicStyle}</p>
-                <p>searchedMusician: {element.searchedMusician}</p>
-                <p>city: {element.city}</p>
+                <p>Music Style: {element.musicStyle}</p>
+                <p>Searched Musician: {element.searchedMusician}</p>
+                <p>City: {element.city}</p>
               </div>
             </div>
-          );
+          ); */
+          }
         })}
       </div>
     </>
