@@ -4,12 +4,13 @@ import { Link } from "react-router-dom";
 
 const MyRequests = () => {
   const [requests, setRequests] = useState({});
-
-  useEffect(() => {
+  const fetchReq = () => {
     service.getAllRequests().then((data) => {
       setRequests(data);
-      // console.log(data);
     });
+  };
+  useEffect(() => {
+    fetchReq();
   }, []);
 
   if (Object.entries(requests).length === 0) {
@@ -27,38 +28,56 @@ const MyRequests = () => {
   return (
     <div>
       <h2>Musicians requests</h2>
+      {/* <React.Fragment > */}
       <div>
         {requests.musicians.map((element) => {
           return (
-            <React.Fragment key={element._id}>
-              <div className="onePostDiv">
-                <div className="imgLinkDiv">
-                  <Link to={`oneMusician/${element._id}`}>
-                    <img
-                      className="profilePic"
-                      src={element.user.picture}
-                      alt=""
-                    />
-                  </Link>
-                </div>
-                <p className="onePostName">{element.user.name}</p>
-                <div className="onePostInfo">
-                  <p>instruments: {element.instruments}</p>
-                  <p>genre: {element.musicStyle}</p>
-                  <p>location: {element.city}</p>
-                  <p>experience: {element.experience}</p>
-                  <p>availability: {element.availability}</p>
-                </div>
+            <div key={element._id} className="onePostDiv">
+              <button
+                onClick={() =>
+                  service.deleteRequest("musicians", element._id).then(() => {
+                    fetchReq();
+                  })
+                }
+              >
+                CLICK HERE TO DELETE
+              </button>
+              <div className="imgLinkDiv">
+                <Link to={`oneMusician/${element._id}`}>
+                  <img
+                    className="profilePic"
+                    src={element.user.picture}
+                    alt=""
+                  />
+                </Link>
               </div>
-            </React.Fragment>
+              <p className="onePostName">{element.user.name}</p>
+              <div className="onePostInfo">
+                <p>instruments: {element.instruments}</p>
+                <p>genre: {element.musicStyle}</p>
+                <p>location: {element.city}</p>
+                <p>experience: {element.experience}</p>
+                <p>availability: {element.availability}</p>
+              </div>
+            </div>
           );
         })}
+        {/* </React.Fragment> */}
       </div>
       <h2>Bands requests</h2>
       <div>
         {requests.bands.map((element) => {
           return (
             <div key={element._id} className="onePostDiv">
+              <button
+                onClick={() =>
+                  service.deleteRequest("bands", element._id).then(() => {
+                    fetchReq();
+                  })
+                }
+              >
+                CLICK HERE TO DELETE
+              </button>
               <div className="imgLinkDiv">
                 <Link to={`oneBand/${element._id}`}>
                   <img
