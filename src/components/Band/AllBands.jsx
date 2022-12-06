@@ -10,14 +10,17 @@ const AllBands = () => {
   const [musicStyleString, setMusicStyleString] = useState("");
 
   useEffect(() => {
+    // Calling the query used to filter in the search bar
+
     const query = `searchedMusician=${searchString}&city=${citySearchString}&musicStyle=${musicStyleString}`;
+
+    // Get all the bands requests from the db
     service.getAllBands(query).then((data) => {
       setBands(data);
     });
   }, [searchString, citySearchString, musicStyleString]);
 
   if (!bands) {
-    // return <div className="loading">Loading...</div>;
     return (
       <div className="spinnerDiv">
         <div className="spinner"></div>
@@ -46,11 +49,6 @@ const AllBands = () => {
         />
       </div>
       <div className="allPostsDiv">
-        {/* .filter((bands) =>
-            bands.searchedMusician
-              .toLowerCase()
-              .includes(searchString.toLowerCase())
-          ) */}
         {bands.map((element) => {
           return (
             <div className="onePostDiv" key={element._id}>

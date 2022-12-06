@@ -33,16 +33,16 @@ const MyRequests = () => {
         {requests.musicians.map((element) => {
           return (
             <div key={element._id} className="onePostDiv">
-              <button
-                onClick={() =>
-                  service.deleteRequest("musicians", element._id).then(() => {
-                    fetchReq();
-                  })
-                }
-              >
-                CLICK HERE TO DELETE
-              </button>
               <div className="imgLinkDiv">
+                <button
+                  onClick={() =>
+                    service.deleteRequest("musicians", element._id).then(() => {
+                      fetchReq();
+                    })
+                  }
+                >
+                  CLICK HERE TO DELETE
+                </button>
                 <Link to={`oneMusician/${element._id}`}>
                   <img
                     className="profilePic"

@@ -4,6 +4,8 @@ import apiHandler from "../../api/apiHandler";
 import { useNavigate } from "react-router-dom";
 
 const FormBand = () => {
+  // Set value form to empty string
+
   const [values, handleChange] = useForm({
     searchedMusician: "",
     musicStyle: "",
@@ -13,6 +15,8 @@ const FormBand = () => {
   });
   const [error, setError] = useState(null);
   const navigate = useNavigate();
+
+  // Handle the band looking for musicians request
 
   const handleSubmit = (e) => {
     e.preventDefault();
