@@ -4,16 +4,19 @@ import { Link } from "react-router-dom";
 import Search from "../Search/Search";
 
 const AllBands = () => {
-  const [bands, setBands] = useState([]);
+  const [bands, setBands] = useState(null);
   const [searchString, setSearchString] = useState("");
+  const [citySearchString, setCitySearchString] = useState("");
+  const [musicStyleString, setMusicStyleString] = useState("");
 
   useEffect(() => {
-    service.getAllBands().then((data) => {
+    const query = `searchedMusician=${searchString}&city=${citySearchString}&musicStyle=${musicStyleString}`;
+    service.getAllBands(query).then((data) => {
       setBands(data);
     });
-  }, []);
+  }, [searchString, citySearchString, musicStyleString]);
 
-  if (!bands.length) {
+  if (!bands) {
     // return <div className="loading">Loading...</div>;
     return (
       <div className="spinnerDiv">
@@ -27,35 +30,46 @@ const AllBands = () => {
       <div className="searchDiv">
         <p>Search band zone</p>
         <Search {...{ searchString, setSearchString }} />
+        <Search
+          {...{
+            searchString: citySearchString,
+            setSearchString: setCitySearchString,
+          }}
+        />
+        <Search
+          {...{
+            searchString: musicStyleString,
+            setSearchString: setMusicStyleString,
+          }}
+        />
       </div>
       <div className="allPostsDiv">
-        {bands
-          .filter((bands) =>
+        {/* .filter((bands) =>
             bands.searchedMusician
               .toLowerCase()
               .includes(searchString.toLowerCase())
-          )
-          .map((element) => {
-            return (
-              <div className="onePostDiv" key={element._id}>
-                <div className="imgLinkDiv">
-                  <Link to={`${element._id}`}>
-                    <img
-                      className="profilePic"
-                      src={element.user.picture}
-                      alt=""
-                    />
-                  </Link>
-                </div>
-                <p className="onePostName">{element.user.name}</p>
-                <div className="onePostInfo">
-                  <p>genre: {element.musicStyle}</p>
-                  <p>looking for: {element.searchedMusician}</p>
-                  <p>location: {element.city}</p>
-                </div>
+          ) */}
+        {bands.map((element) => {
+          return (
+            <div className="onePostDiv" key={element._id}>
+              <div className="imgLinkDiv">
+                <Link to={`${element._id}`}>
+                  <img
+                    className="profilePic"
+                    src={element.user.picture}
+                    alt=""
+                  />
+                </Link>
               </div>
-            );
-          })}
+              <p className="onePostName">{element.user.name}</p>
+              <div className="onePostInfo">
+                <p>musicStyle: {element.musicStyle}</p>
+                <p>searchedMusician: {element.searchedMusician}</p>
+                <p>city: {element.city}</p>
+              </div>
+            </div>
+          );
+        })}
       </div>
     </>
   );
