@@ -136,9 +136,8 @@ const FormEditProfile = () => {
             type="file"
             id="picture"
             name="picture"
-            // value={picture.name || ""}
             onChange={handleChange}
-            //   value={values.picture || ""}
+            // value={values.picture}
           />
         </div>
         <button>Submit</button>

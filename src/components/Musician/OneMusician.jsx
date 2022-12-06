@@ -27,14 +27,22 @@ const OneMusician = () => {
   // return <div className="loading">Loading...</div>;
 
   return (
-    <div>
-      <Link to={`/contact/musicians/${musician._id}`}>Contact them</Link>
-      <p>{musician.instruments}</p>
-      <p>{musician.musicStyle}</p>
-      <p>{musician.city}</p>
-      <p>{musician.experience}</p>
-      <p>{musician.description}</p>
-    </div>
+    <>
+      <div className="searchDiv"></div>
+      <div className="oneBandId">
+        <img className="profilePic" src={musician.user.picture} alt="" />
+        <p>{musician.instruments}</p>
+        <p>{musician.musicStyle}</p>
+        <p>{musician.city}</p>
+        <p>{musician.experience}</p>
+        <p>{musician.description}</p>
+        <button className="oneReqBtn">
+          <Link className="oneReqLinks" to={`/contact/bands/${musician._id}`}>
+            Contact {musician.user.name}
+          </Link>
+        </button>
+      </div>
+    </>
   );
   // return <pre>{JSON.stringify(musician, null, 2)}</pre>;
 };
