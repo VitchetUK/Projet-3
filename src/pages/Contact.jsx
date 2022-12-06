@@ -17,7 +17,12 @@ const Contact = () => {
       });
   }, []);
 
-  if (!contact) return <div className="loading">loading...</div>;
+  if (!contact)
+    return (
+      <div className="spinnerDiv">
+        <div className="spinner"></div>
+      </div>
+    );
   return (
     <div className="profilePageDiv">
       <div className="profilePicPageDiv">

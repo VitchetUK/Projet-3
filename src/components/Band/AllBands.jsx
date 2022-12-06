@@ -8,7 +8,7 @@ const AllBands = () => {
   const [searchString, setSearchString] = useState("");
   const [citySearchString, setCitySearchString] = useState("");
   const [musicStyleString, setMusicStyleString] = useState("");
-
+  console.log(bands);
   useEffect(() => {
     const query = `searchedMusician=${searchString}&city=${citySearchString}&musicStyle=${musicStyleString}`;
     service.getAllBands(query).then((data) => {

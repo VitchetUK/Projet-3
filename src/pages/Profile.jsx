@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useParams, NavLink } from "react-router-dom";
 import service from "../api/apiHandler";
+import useAuth from "../auth/useAuth";
 
 const Profile = () => {
   const [user, setUser] = useState(null);
+  const { removeUser } = useAuth();
 
   useEffect(() => {
     service
@@ -16,6 +18,18 @@ const Profile = () => {
         console.error(e.message);
       });
   }, []);
+
+  const deleteAccount = () => {
+    service
+      .delete("/api/profile")
+      .then((res) => {
+        console.log(res);
+        removeUser();
+      })
+      .catch((e) => {
+        console.error(e.message);
+      });
+  };
 
   if (!user) {
     // return <div className="loading">Loading...</div>;
@@ -58,6 +72,12 @@ const Profile = () => {
         <NavLink className="formBtnEdit" to="/profile/edit">
           Edit
         </NavLink>
+        <button
+          onClick={() => deleteAccount(user._id)}
+          className="formBtnDelete"
+        >
+          delete my account
+        </button>
       </div>
     </div>
   );
