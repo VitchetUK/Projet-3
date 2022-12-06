@@ -65,16 +65,16 @@ const service = {
       .catch(errorHandler);
   },
 
-  getAllBands() {
+  getAllBands(query) {
     return service
-      .get("/api/bands")
+      .get(`/api/bands?${query}`)
       .then((res) => res.data)
       .catch(errorHandler);
   },
 
-  getAllMusicians() {
+  getAllMusicians(query) {
     return service
-      .get("/api/musicians")
+      .get(`/api/musicians?${query}`)
       .then((res) => res.data)
       .catch(errorHandler);
   },

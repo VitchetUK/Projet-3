@@ -33,7 +33,7 @@ const MyRequests = () => {
             <React.Fragment key={element._id}>
               <div className="onePostDiv">
                 <div className="imgLinkDiv">
-                  <Link to={`${element._id}`}>
+                  <Link to={`oneMusician/${element._id}`}>
                     <img
                       className="profilePic"
                       src={element.user.picture}
@@ -58,25 +58,23 @@ const MyRequests = () => {
       <div>
         {requests.bands.map((element) => {
           return (
-            <React.Fragment key={element._id}>
-              <div className="onePostDiv">
-                <div className="imgLinkDiv">
-                  <Link to={`${element._id}`}>
-                    <img
-                      className="profilePic"
-                      src={element.user.picture}
-                      alt=""
-                    />
-                  </Link>
-                </div>
-                <p className="onePostName">{element.user.name}</p>
-                <div className="onePostInfo">
-                  <p>genre: {element.musicStyle}</p>
-                  <p>looking for: {element.searchedMusician}</p>
-                  <p>location: {element.city}</p>
-                </div>
+            <div key={element._id} className="onePostDiv">
+              <div className="imgLinkDiv">
+                <Link to={`oneBand/${element._id}`}>
+                  <img
+                    className="profilePic"
+                    src={element.user.picture}
+                    alt=""
+                  />
+                </Link>
               </div>
-            </React.Fragment>
+              <p className="onePostName">{element.user.name}</p>
+              <div className="onePostInfo">
+                <p>genre: {element.musicStyle}</p>
+                <p>looking for: {element.searchedMusician}</p>
+                <p>location: {element.city}</p>
+              </div>
+            </div>
           );
         })}
       </div>

@@ -40,10 +40,8 @@ function App() {
           <Route path="/allBands/create" element={<FormBand />} />
           <Route path="/allMusicians/create" element={<FormMusician />} />
           <Route path="/myRequests" element={<MyRequests />} />
-          <Route
-            path="/myRequests/:id"
-            element={<OneBand /> || <OneMusician />}
-          />
+          <Route path="/myRequests/oneBand/:id" element={<OneBand />} />
+          <Route path="/myRequests/oneMusician/:id" element={<OneMusician />} />
         </Route>
       </Routes>
     </div>
