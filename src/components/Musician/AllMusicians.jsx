@@ -28,14 +28,16 @@ const AllMusicians = () => {
   return (
     <>
       <div className="searchDiv">
-        <p>Search musi zone</p>
+        <p>instruments</p>
         <Search {...{ searchString, setSearchString }} />
+        <p>city</p>
         <Search
           {...{
             searchString: citySearchString,
             setSearchString: setCitySearchString,
           }}
         />
+        <p>musicStyle</p>
         <Search
           {...{
             searchString: musicStyleString,

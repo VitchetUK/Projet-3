@@ -100,6 +100,13 @@ const service = {
       .catch(errorHandler);
   },
 
+  deleteRequest(cat, id) {
+    return service
+      .delete(`/api/myRequests/${cat}/${id}`)
+      .then((res) => res.data)
+      .catch(errorHandler);
+  },
+
   // getAllTheCats() {
   // 	return service
   // 		.get("/api/cats")
