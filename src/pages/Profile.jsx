@@ -27,7 +27,7 @@ const Profile = () => {
   }
 
   return (
-    <body className="profilePageBackground">
+    <div className="profilePageBackground">
       <div className="profilePageDiv">
         <div className="profilePicPageDiv">
           <img className="profilePicPage" src={user.picture} alt="" />
@@ -59,7 +59,7 @@ const Profile = () => {
           Edit
         </NavLink>
       </div>
-    </body>
+    </div>
   );
 };
 

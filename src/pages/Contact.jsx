@@ -19,9 +19,9 @@ const Contact = () => {
 
   if (!contact) return <div className="loading">loading...</div>;
   return (
-    <>
-      <div>
-        <img src={contact.user.picture} alt="" />
+    <div className="profilePageDiv">
+      <div className="profilePicPageDiv">
+        <img className="profilePic" src={contact.user.picture} alt="" />
       </div>
       <ul>
         <li>{contact.user.name}</li>
@@ -42,7 +42,7 @@ const Contact = () => {
         </li>
         <li>{contact.user.displayEmail}</li>
       </ul>
-    </>
+    </div>
   );
 };
 
