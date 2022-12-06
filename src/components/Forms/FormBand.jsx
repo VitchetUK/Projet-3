@@ -23,7 +23,7 @@ const FormBand = () => {
     apiHandler
       .createBand(values)
       .then(() => {
-        navigate("/allBands");
+        navigate("/all-bands");
       })
       .catch((e) => {
         setError(e.response.data);

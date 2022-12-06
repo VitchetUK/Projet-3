@@ -20,29 +20,27 @@ function errorHandler(error) {
   throw error;
 }
 
-// apiHandler.signup = (userInfo) => {
-// 	return apiHandler
-// 		.post("/api/auth/signup")
-// 		.then((res) => res.data)
-// 		.catch(errorHandler)
-// }
-
 const service = {
   // Service is spread to have access to the basics get/post...
   ...apiHandler,
 
+  // Sign Up / Create an account in the backend
   signup(userInfo) {
     return service
       .post("/api/auth/signup", userInfo)
       .then((res) => res.data)
       .catch(errorHandler);
   },
+
+  // Check if isLoggedIn in the backend
   isLoggedIn() {
     return service
       .get("/api/auth/me")
       .then((res) => res.data)
       .catch(errorHandler);
   },
+
+  // Signing In in the backend
 
   signin(userInfo) {
     return service
@@ -51,12 +49,16 @@ const service = {
       .catch(errorHandler);
   },
 
+  // Post to create a band request to the db
+
   createBand(reqInfo) {
     return service
       .post("/api/bands", reqInfo)
       .then((res) => res.data)
       .catch(errorHandler);
   },
+
+  // Post to create a musician request to the db
 
   createMusician(reqInfo) {
     return service
@@ -65,12 +67,16 @@ const service = {
       .catch(errorHandler);
   },
 
+  // Get all the band request in the db
+
   getAllBands(query) {
     return service
       .get(`/api/bands?${query}`)
       .then((res) => res.data)
       .catch(errorHandler);
   },
+
+  // Get all the band request in the db
 
   getAllMusicians(query) {
     return service
@@ -79,12 +85,16 @@ const service = {
       .catch(errorHandler);
   },
 
+  // Get and display one profile
+
   getOneProfile() {
     return service
       .get("/api/profile")
       .then((res) => res.data)
       .catch(errorHandler);
   },
+
+  // Edit and Update the profile
 
   updateProfile(reqInfo) {
     return service
@@ -93,6 +103,8 @@ const service = {
       .catch(errorHandler);
   },
 
+  // Get and display all requests made by the user
+
   getAllRequests() {
     return service
       .get("/api/myRequests")
@@ -100,21 +112,14 @@ const service = {
       .catch(errorHandler);
   },
 
+  // Delete the request from the db
+
   deleteRequest(cat, id) {
     return service
       .delete(`/api/myRequests/${cat}/${id}`)
       .then((res) => res.data)
       .catch(errorHandler);
   },
-
-  // getAllTheCats() {
-  // 	return service
-  // 		.get("/api/cats")
-  // 		.then((res) => res.data)
-  // 		.catch(errorHandler);
-  // },
 };
-
-// export default apiHandler
 
 export default service;

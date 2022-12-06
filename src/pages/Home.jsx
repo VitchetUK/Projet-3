@@ -7,14 +7,14 @@ const Home = () => {
       <div className="homePageDiv">
         <div className="homePageLinksDivs">
           <button className="homePageBtn">
-            <Link className="homePageLinks" to="/allBands">
+            <Link className="homePageLinks" to="/all-bands">
               Looking for a band?
             </Link>
           </button>
         </div>
         <div className="homePageLinksDivs">
           <button className="homePageBtn">
-            <Link className="homePageLinks" to="/allMusicians">
+            <Link className="homePageLinks" to="/all-musicians">
               Looking for a musician?
             </Link>
           </button>

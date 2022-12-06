@@ -9,26 +9,25 @@ const NavMain = () => {
       <ul className="ulNav">
         <li>
           <NavLink className="logo" to="/">
-
             <img className="logoImg" src="/logo-museek.png" alt="" />
           </NavLink>
         </li>
         {isLoggedIn && (
           <>
             <li>
-              <NavLink to="/allBands">All Bands</NavLink>
+              <NavLink to="/all-bands">All Bands</NavLink>
             </li>
             <li>
-              <NavLink to="/allMusicians">all Musicians</NavLink>
+              <NavLink to="/all-musicians">all Musicians</NavLink>
             </li>
             <li>
-              <NavLink to="/allBands/create">Bands Form</NavLink>
+              <NavLink to="/all-bands/create">Bands Form</NavLink>
             </li>
             <li>
-              <NavLink to="/allMusicians/create">Musicians Form</NavLink>
+              <NavLink to="/all-musicians/create">Musicians Form</NavLink>
             </li>
             <li>
-              <NavLink to="/myRequests">My requests</NavLink>
+              <NavLink to="/my-requests">My requests</NavLink>
             </li>
             <li>
               <NavLink to="/profile">

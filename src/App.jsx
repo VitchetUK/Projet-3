@@ -22,10 +22,10 @@ function App() {
       <NavMain />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/allBands" element={<AllBands />} />
-        <Route path="/allBands/:id" element={<OneBand />} />
-        <Route path="/allMusicians" element={<AllMusicians />} />
-        <Route path="/allMusicians/:id" element={<OneMusician />} />
+        <Route path="/all-bands" element={<AllBands />} />
+        <Route path="/all-bands/:id" element={<OneBand />} />
+        <Route path="/all-musicians" element={<AllMusicians />} />
+        <Route path="/all-musicians/:id" element={<OneMusician />} />
 
         <Route element={<LoggedOut />}>
           <Route path="/signin" element={<Signin />} />
@@ -37,11 +37,14 @@ function App() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/contact/:category/:id" element={<Contact />} />
           <Route path="/profile/edit" element={<FormEditProfile />} />
-          <Route path="/allBands/create" element={<FormBand />} />
-          <Route path="/allMusicians/create" element={<FormMusician />} />
-          <Route path="/myRequests" element={<MyRequests />} />
-          <Route path="/myRequests/oneBand/:id" element={<OneBand />} />
-          <Route path="/myRequests/oneMusician/:id" element={<OneMusician />} />
+          <Route path="/all-bands/create" element={<FormBand />} />
+          <Route path="/all-musicians/create" element={<FormMusician />} />
+          <Route path="/my-requests" element={<MyRequests />} />
+          <Route path="/my-requests/one-band/:id" element={<OneBand />} />
+          <Route
+            path="/my-requests/one-musician/:id"
+            element={<OneMusician />}
+          />
         </Route>
       </Routes>
     </div>

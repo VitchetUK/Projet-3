@@ -5,6 +5,8 @@ import { useNavigate } from "react-router-dom";
 import useAuth from "../../auth/useAuth";
 
 const FormEditProfile = () => {
+  // Set the default value as current value from the user
+
   const { currentUser, authenticateUser } = useAuth();
   console.log(currentUser);
   const [values, handleChange] = useForm({
@@ -23,6 +25,9 @@ const FormEditProfile = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const fd = new FormData();
+
+    //////////////////// ALT WAY TO DO THE APPEND WITHOUT A LOOP///////////////////
+
     // fd.append("name", values.name);
     // fd.append("username", values.username);
     // fd.append("phone", values.phone);
@@ -39,10 +44,14 @@ const FormEditProfile = () => {
     for (const key in values) {
       fd.append(key, values[key]);
 
-      // if (values[key] === "") {
-      //   return setError({ message: "All fields are required" });
-      // }
+      //////////////////////COMMENT IF YOU DON'T WANT ALL FIELDS NEEDED TO SEND FORM //////////////////////////
+
+      if (values[key] === "") {
+        return setError({ message: "All fields are required" });
+      }
     }
+
+    // Handle the profile edit
 
     apiHandler
       .updateProfile(fd)

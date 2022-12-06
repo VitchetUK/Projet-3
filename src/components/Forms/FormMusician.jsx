@@ -24,7 +24,7 @@ const FormMusician = () => {
     apiHandler
       .createMusician(values)
       .then(() => {
-        navigate("/allMusicians");
+        navigate("/all-musicians");
       })
       .catch((e) => {
         console.log(e);
