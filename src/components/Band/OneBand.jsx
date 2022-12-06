@@ -6,6 +6,8 @@ const OneBand = () => {
   const [band, setBand] = useState(null);
   const { id } = useParams();
 
+  // Get one requests from the db
+
   useEffect(() => {
     service
       .get(`/api/bands/${id}`)
@@ -23,9 +25,7 @@ const OneBand = () => {
         <div className="spinner"></div>
       </div>
     );
-  // return <div className="loading">Loading...</div>;
 
-  // return <pre>{JSON.stringify(band, null, 2)}</pre>;
   return (
     <>
       <div className="searchDiv"></div>

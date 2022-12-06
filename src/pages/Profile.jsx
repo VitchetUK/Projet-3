@@ -40,12 +40,14 @@ const Profile = () => {
             <li>{user.age}</li>
             <li>
               twitter:{" "}
-              <a href={`https://twitter.com/${user.twitter}`}>{user.twitter}</a>
+              <a href={`https://twitter.com/${user.twitter}`}>
+                @{user.twitter}
+              </a>
             </li>
             <li>
               instagram:{" "}
               <a href={`https://www.instagram.com/${user.instagram}`}>
-                {user.instagram}
+                @{user.instagram}
               </a>
             </li>
             <li>{user.displayEmail}</li>

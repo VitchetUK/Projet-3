@@ -10,6 +10,7 @@ const AllMusicians = () => {
   const [musicStyleString, setMusicStyleString] = useState("");
 
   useEffect(() => {
+    // Calling the query used to filter in the search bar
     const query = `instruments=${searchString}&city=${citySearchString}&musicStyle=${musicStyleString}`;
     service.getAllMusicians(query).then((data) => {
       setMusicians(data);
@@ -22,7 +23,6 @@ const AllMusicians = () => {
         <div className="spinner"></div>
       </div>
     );
-    // return <div className="loading">Loading...</div>;
   }
 
   return (
@@ -46,7 +46,9 @@ const AllMusicians = () => {
         />
       </div>
       <div className="allPostsDiv">
-        {/* .filter((musicians) =>
+        {/* //////ALT WAY TO DO THE SEARCH FILTER, CAN'T FILTER MULTIPLE FIELDS/////
+        
+         .filter((musicians) =>
             musicians.instruments
               .toLowerCase()
               .includes(searchString.toLowerCase())
