@@ -34,10 +34,10 @@ const AllBands = () => {
         <div className="oneSearchBarDiv">
           <p>Search by instrument:</p>
           <Search {...{ searchString, setSearchString }} />
-          <button className="searchBtn">
+          {/* <button className="searchBtn">
             <img src="public/icons8-search-50.png" alt="" />
           </button>
-          {/* <a target="_blank" href="https://icons8.com/icon/132/search">Search</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a> */}
+          <a target="_blank" href="https://icons8.com/icon/132/search">Search</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a> */}
         </div>
         <div className="oneSearchBarDiv">
           <p>Search by city:</p>
@@ -47,9 +47,9 @@ const AllBands = () => {
               setSearchString: setCitySearchString,
             }}
           />
-          <button className="searchBtn">
+          {/* <button className="searchBtn">
             <img src="public/icons8-search-50.png" alt="" />
-          </button>
+          </button> */}
         </div>
         <div className="oneSearchBarDiv">
           <p>Search by music style:</p>
@@ -59,9 +59,9 @@ const AllBands = () => {
               setSearchString: setMusicStyleString,
             }}
           />
-          <button className="searchBtn">
+          {/* <button className="searchBtn">
             <img src="public/icons8-search-50.png" alt="" />
-          </button>
+          </button> */}
         </div>
       </div>
       <div className="allPostsDiv">

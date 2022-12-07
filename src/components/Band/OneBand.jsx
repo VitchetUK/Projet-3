@@ -28,22 +28,39 @@ const OneBand = () => {
 
   return (
     <>
-      <div className="searchDiv"></div>
       <div className="oneBandId">
-        <img className="profilePic" src={band.user.picture} alt="" />
+        <img className="oneBandImg" src={band.user.picture} alt="" />
 
-        <p>
-          {band.user.name}'s search: {band.searchedMusician}
-        </p>
-        <p>{band.musicStyle}</p>
-        <p>{band.city}</p>
-        <p>{band.description}</p>
-        <p>{band.availability}</p>
-        <button className="oneReqBtn">
-          <Link className="oneReqLinks" to={`/contact/bands/${band._id}`}>
-            Contact {band.user.name}
-          </Link>
-        </button>
+        <div className="oneBandDescription">
+          <div>
+            <h4>{band.user.name} is looking for:</h4>
+            <p>{band.searchedMusician}</p>
+          </div>
+
+          <div>
+            <h4>The music they're into:</h4>
+            <p>{band.musicStyle}</p>
+          </div>
+
+          <div>
+            <h4>Where they meet to rehearse:</h4>
+            <p>{band.city}</p>
+          </div>
+
+          <div>
+            <h4>Request's description:</h4> <p>{band.description}</p>
+          </div>
+
+          <p>{band.availability}</p>
+          <button className="updateProfileBtn">
+            <Link
+              className="updateProfileBtn"
+              to={`/contact/bands/${band._id}`}
+            >
+              Contact {band.user.name}
+            </Link>
+          </button>
+        </div>
       </div>
     </>
   );

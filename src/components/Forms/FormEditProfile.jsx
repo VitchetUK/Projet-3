@@ -47,7 +47,7 @@ const FormEditProfile = () => {
   return (
     <div className="container">
       {error && <h3 className="error">{error.message}</h3>}
-      <form className="form" onSubmit={handleSubmit}>
+      <form className="formEditProfile" onSubmit={handleSubmit}>
         <h2>Update your profile</h2>
         <div className="labelInput">
           <label htmlFor="name">name</label>
@@ -128,7 +128,7 @@ const FormEditProfile = () => {
             onChange={handleChange}
           />
         </div>
-        <button>Submit</button>
+        <button className="updateProfileBtn">SUBMIT</button>
       </form>
     </div>
   );
