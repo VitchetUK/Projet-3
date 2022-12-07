@@ -31,22 +31,38 @@ const AllBands = () => {
   return (
     <>
       <div className="searchDiv">
-        <p>instrument</p>
-        <Search {...{ searchString, setSearchString }} />
-        <p>city</p>
-        <Search
-          {...{
-            searchString: citySearchString,
-            setSearchString: setCitySearchString,
-          }}
-        />
-        <p>music style</p>
-        <Search
-          {...{
-            searchString: musicStyleString,
-            setSearchString: setMusicStyleString,
-          }}
-        />
+        <div className="oneSearchBarDiv">
+          <p>Search by instrument:</p>
+          <Search {...{ searchString, setSearchString }} />
+          <button className="searchBtn">
+            <img src="public/icons8-search-50.png" alt="" />
+          </button>
+          {/* <a target="_blank" href="https://icons8.com/icon/132/search">Search</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a> */}
+        </div>
+        <div className="oneSearchBarDiv">
+          <p>Search by city:</p>
+          <Search
+            {...{
+              searchString: citySearchString,
+              setSearchString: setCitySearchString,
+            }}
+          />
+          <button className="searchBtn">
+            <img src="public/icons8-search-50.png" alt="" />
+          </button>
+        </div>
+        <div className="oneSearchBarDiv">
+          <p>Search by music style:</p>
+          <Search
+            {...{
+              searchString: musicStyleString,
+              setSearchString: setMusicStyleString,
+            }}
+          />
+          <button className="searchBtn">
+            <img src="public/icons8-search-50.png" alt="" />
+          </button>
+        </div>
       </div>
       <div className="allPostsDiv">
         {bands.map((element) => {

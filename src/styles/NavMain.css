@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap");
 /* .NavMain {
   display: flex;
   gap: 0.5em;
@@ -11,11 +12,20 @@
   margin: 0;
 }
 
-nav {
+/* nav {
   box-shadow: 0 10px 20px -6px rgba(0, 0, 0 / 5%);
+} */
+
+.NavMain {
+  height: 5rem;
+  z-index: 2;
+  box-shadow: 0px 5px 0px #723d46;
 }
 
 .ulNav {
+  display: flex;
+  align-items: center;
+  justify-content: left;
   list-style-type: none;
   overflow: hidden;
   /* background-color: rgb(64, 65, 63); */
@@ -23,11 +33,11 @@ nav {
 }
 
 nav {
-  width: 100%;
+  /* width: 100%; */
+
   margin: 0 auto;
   background: #472d30;
   padding: 13px 0;
-  box-shadow: 0px 5px 0px #723d46;
 }
 nav ul {
   list-style: none;
@@ -35,15 +45,17 @@ nav ul {
 }
 nav ul li {
   display: inline-block;
+  font-size: 0.8rem;
 }
 nav ul li a {
   display: block;
-  padding: 15px 10px;
+  padding: 0 10px;
   text-decoration: none;
   color: rgb(255, 255, 255);
   /* font-weight: 500; */
   text-transform: uppercase;
   margin: 0 1rem;
+  font-family: "Work Sans", sans-serif;
 }
 .logoutBtn,
 .logoutBtn:after,
@@ -58,6 +70,22 @@ nav ul li a:hover {
   color: #ebfdf8;
 }
 
+/* .logo,
+.logo:after,
+.logo:before {
+  transition: none;
+} */
+
+/* .logo a:hover {
+  color: #472d30;
+} */
+
+/* nav.stroke .logo:after,
+nav.fill .logo:after {
+  position: none;
+  background: none;
+} */
+
 nav.stroke .logoutBtn,
 nav.fill .logoutBtn,
 nav.stroke ul li a,
@@ -69,12 +97,12 @@ nav.fill .logoutBtn:after,
 nav.stroke ul li a:after,
 nav.fill ul li a:after {
   position: absolute;
-  bottom: 0;
+  bottom: -10px;
   left: 0;
   right: 0;
   margin: auto;
   width: 0%;
-  content: ".";
+  content: "";
   color: transparent;
   background: #c4fcef;
   height: 1.5px;
@@ -84,7 +112,7 @@ nav.stroke ul li a:hover:after {
   width: 100%;
 }
 .logoutBtn.fill,
-nav.fill ul li a {
+nav.fill ul li a:not(.logo) {
   transition: all 2s;
 }
 
@@ -113,9 +141,11 @@ nav.fill ul li a:hover:after {
   padding: 15px 10px;
   text-decoration: none;
   color: rgb(255, 255, 255);
-  font-weight: 800;
+  /* font-weight: 800; */
   text-transform: uppercase;
   margin: 0 10px;
   overflow: hidden;
   cursor: pointer;
+  font-family: "Work Sans", sans-serif;
+  font-size: 0.8rem;
 }

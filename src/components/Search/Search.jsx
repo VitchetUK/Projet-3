@@ -7,7 +7,12 @@ const Search = ({ searchString, setSearchString }) => {
 
   return (
     <>
-      <input type="search" value={searchString} onChange={handleSearch} />
+      <input
+        className="searchBarInput"
+        type="search"
+        value={searchString}
+        onChange={handleSearch}
+      />
     </>
   );
 };

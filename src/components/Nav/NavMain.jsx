@@ -18,6 +18,12 @@ const NavMain = () => {
         <li>
           <NavLink to="/all-musicians">all Musicians</NavLink>
         </li>
+         <li>
+              <NavLink to="/all-bands">Bands</NavLink>
+            </li>
+            <li>
+              <NavLink to="/all-musicians">Musicians</NavLink>
+            </li>
         {isLoggedIn && (
           <>
             <li>
