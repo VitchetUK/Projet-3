@@ -8,10 +8,9 @@ const AllBands = () => {
   const [searchString, setSearchString] = useState("");
   const [citySearchString, setCitySearchString] = useState("");
   const [musicStyleString, setMusicStyleString] = useState("");
-  console.log(bands);
-  useEffect(() => {
-    // Calling the query used to filter in the search bar
 
+  useEffect(() => {
+    // Calling the query that we can use to filter in the search bar
     const query = `searchedMusician=${searchString}&city=${citySearchString}&musicStyle=${musicStyleString}`;
 
     // Get all the bands requests from the db

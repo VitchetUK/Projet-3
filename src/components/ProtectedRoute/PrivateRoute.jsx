@@ -10,7 +10,6 @@ const PrivateRoute = () => {
         <div className="spinner"></div>
       </div>
     );
-  // return <p>Loading...</p>;
   if (!isLoggedIn) return <Navigate to="/signin" />;
   else return <Outlet />;
 };

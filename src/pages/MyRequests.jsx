@@ -27,7 +27,6 @@ const MyRequests = () => {
   return (
     <div>
       <h2>Musicians requests</h2>
-      {/* <React.Fragment > */}
       <div>
         {requests.musicians.map((element) => {
           return (
@@ -61,7 +60,6 @@ const MyRequests = () => {
             </div>
           );
         })}
-        {/* </React.Fragment> */}
       </div>
       <h2>Bands requests</h2>
       <div>

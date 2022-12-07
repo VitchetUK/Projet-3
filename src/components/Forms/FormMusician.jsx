@@ -17,10 +17,15 @@ const FormMusician = () => {
   const [error, setError] = useState(null);
   const navigate = useNavigate();
 
-  // Handle the musician looking for a band request
+  // Handle the "musician looking for a band" request
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    for (const key in values) {
+      if (values[key] === "") {
+        return setError({ message: "All fields are required" });
+      }
+    }
     apiHandler
       .createMusician(values)
       .then(() => {

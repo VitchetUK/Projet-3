@@ -11,7 +11,6 @@ const Profile = () => {
     service
       .getOneProfile()
       .then((response) => {
-        console.log(response);
         setUser(response);
       })
       .catch((e) => {
@@ -23,7 +22,6 @@ const Profile = () => {
     service
       .delete("/api/profile")
       .then((res) => {
-        console.log(res);
         removeUser();
       })
       .catch((e) => {

@@ -10,7 +10,6 @@ const LoggedOut = () => {
         <div className="spinner"></div>
       </div>
     );
-  // return <p>Loading...</p>
   if (isLoggedIn) return <Navigate to="/" />;
   else return <Outlet />;
 };
