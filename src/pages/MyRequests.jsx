@@ -26,44 +26,46 @@ const MyRequests = () => {
   }
 
   return (
-    <div>
-      <h2>Bands requests</h2>
-      <div>
+    <div className="allReq">
+      <h2 className="h2Req">Bands requests</h2>
+      <div className="allReqsDiv">
         {requests.bands.map((element) => {
           return (
-            <div className="oneRequest">
-              <div key={element._id}>
+            <div className="oneRequest" key={element._id}>
+              <div>
                 <Card {...element} />
               </div>
               <button
+                className="deleteReqBtn"
                 onClick={() =>
                   service.deleteRequest("bands", element._id).then(() => {
                     fetchReq();
                   })
                 }
               >
-                CLICK HERE TO DELETE
+                DELETE
               </button>
             </div>
           );
         })}
       </div>
-      <h2>Musicians requests</h2>
-      <div>
+      <h2 className="h2Req">Musicians requests</h2>
+      <div className="allReqsDiv">
         {requests.musicians.map((element) => {
           return (
-            <div className="oneRequest">
-              <div key={element._id}>
+            <div className="oneRequest" key={element._id}>
+              <div>
                 <Card {...element} />
               </div>
               <button
+                className="deleteReqBtn"
                 onClick={() =>
                   service.deleteRequest("musicians", element._id).then(() => {
                     fetchReq();
                   })
                 }
               >
-                CLICK HERE TO DELETE
+                DELETE
               </button>
             </div>
           );
