@@ -31,8 +31,10 @@ const MyRequests = () => {
       <div>
         {requests.bands.map((element) => {
           return (
-            <div key={element._id}>
-              <Card {...element} />
+            <div className="oneRequest">
+              <div key={element._id}>
+                <Card {...element} />
+              </div>
               <button
                 onClick={() =>
                   service.deleteRequest("bands", element._id).then(() => {
@@ -50,8 +52,10 @@ const MyRequests = () => {
       <div>
         {requests.musicians.map((element) => {
           return (
-            <div key={element._id}>
-              <Card {...element} />
+            <div className="oneRequest">
+              <div key={element._id}>
+                <Card {...element} />
+              </div>
               <button
                 onClick={() =>
                   service.deleteRequest("musicians", element._id).then(() => {

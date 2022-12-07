@@ -409,3 +409,13 @@ label {
   background-color: white;
   color: grey;
 }
+
+/* .requestsDiv {
+  display: flex;
+  flex-direction: column;
+}*/
+
+.oneRequest {
+  display: flex;
+  flex-direction: column;
+}

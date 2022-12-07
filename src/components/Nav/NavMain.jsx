@@ -13,17 +13,11 @@ const NavMain = () => {
           </NavLink>
         </li>
         <li>
-          <NavLink to="/all-bands">All Bands</NavLink>
+          <NavLink to="/all-bands">Bands</NavLink>
         </li>
         <li>
-          <NavLink to="/all-musicians">all Musicians</NavLink>
+          <NavLink to="/all-musicians">Musicians</NavLink>
         </li>
-         <li>
-              <NavLink to="/all-bands">Bands</NavLink>
-            </li>
-            <li>
-              <NavLink to="/all-musicians">Musicians</NavLink>
-            </li>
         {isLoggedIn && (
           <>
             <li>
@@ -36,7 +30,7 @@ const NavMain = () => {
               <NavLink to="/my-requests">My requests</NavLink>
             </li>
             <li>
-              <NavLink to="/profile">Profile of {currentUser.name}</NavLink>
+              <NavLink to="/profile">My profile</NavLink>
             </li>
             <button className="logoutBtn" onClick={removeUser}>
               Log-Out
