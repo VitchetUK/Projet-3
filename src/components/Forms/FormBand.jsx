@@ -43,7 +43,7 @@ const FormBand = () => {
 
         <div className="labelInput">
           <label className="formInput" htmlFor="searchedMusician">
-            Searched Musician:
+            Looking for:
           </label>
           <input
             className="formInput"
@@ -52,6 +52,7 @@ const FormBand = () => {
             name="searchedMusician"
             onChange={handleChange}
             value={values.searchedMusician}
+            placeholder="guitarist, pianist..."
           />
         </div>
         <div className="labelInput">
@@ -63,6 +64,7 @@ const FormBand = () => {
             name="musicStyle"
             onChange={handleChange}
             value={values.musicStyle}
+            placeholder="jazz, rock, indie rap..."
           />
         </div>
         <div className="labelInput">
@@ -74,10 +76,11 @@ const FormBand = () => {
             name="city"
             onChange={handleChange}
             value={values.city}
+            placeholder="Paris, Marseille, Bordeaux..."
           />
         </div>
         <div className="labelInput">
-          <label htmlFor="description">Description:</label>
+          <label htmlFor="description">Short description:</label>
           <input
             className="formInput"
             type="string"
@@ -85,6 +88,7 @@ const FormBand = () => {
             name="description"
             onChange={handleChange}
             value={values.description}
+            placeholder="Hello! We're a group of 4 looking for..."
           />
         </div>
         <div className="labelInput">
@@ -96,6 +100,7 @@ const FormBand = () => {
             name="availability"
             onChange={handleChange}
             value={values.availability}
+            placeholder="Playing on the sunday, practicing every afternoon..."
           />
         </div>
         <button className="formBtn">Submit</button>
