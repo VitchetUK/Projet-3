@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Card = ({ _id, user, ...rest }) => {
+const Card = ({ _id, user, cardType, ...rest }) => {
   const data = Object.entries(rest).map((microArray) => {
     const key = splitWords(microArray[0]);
     return [key, microArray[1]];
@@ -10,7 +10,7 @@ const Card = ({ _id, user, ...rest }) => {
   return (
     <div className="onePostDiv" key={_id}>
       <div className="imgLinkDiv">
-        <Link to={`${_id}`}>
+        <Link to={`${cardType}${_id}`}>
           <img className="profilePic" src={user.picture} alt="" />
         </Link>
       </div>
