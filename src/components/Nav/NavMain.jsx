@@ -15,10 +15,10 @@ const NavMain = () => {
         {isLoggedIn && (
           <>
             <li>
-              <NavLink to="/all-bands">All Bands</NavLink>
+              <NavLink to="/all-bands">Bands</NavLink>
             </li>
             <li>
-              <NavLink to="/all-musicians">all Musicians</NavLink>
+              <NavLink to="/all-musicians">Musicians</NavLink>
             </li>
             <li>
               <NavLink to="/all-bands/create">Bands Form</NavLink>

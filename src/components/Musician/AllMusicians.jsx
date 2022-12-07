@@ -29,22 +29,37 @@ const AllMusicians = () => {
   return (
     <>
       <div className="searchDiv">
-        <p>instruments</p>
-        <Search {...{ searchString, setSearchString }} />
-        <p>city</p>
-        <Search
-          {...{
-            searchString: citySearchString,
-            setSearchString: setCitySearchString,
-          }}
-        />
-        <p>musicStyle</p>
-        <Search
-          {...{
-            searchString: musicStyleString,
-            setSearchString: setMusicStyleString,
-          }}
-        />
+        <div className="oneSearchBarDiv">
+          <p>Search by instrument:</p>
+          <Search {...{ searchString, setSearchString }} />
+          <button className="searchBtn">
+            <img src="public/icons8-search-50.png" alt="" />
+          </button>
+        </div>
+        <div className="oneSearchBarDiv">
+          <p>Search by city:</p>
+          <Search
+            {...{
+              searchString: citySearchString,
+              setSearchString: setCitySearchString,
+            }}
+          />
+          <button className="searchBtn">
+            <img src="public/icons8-search-50.png" alt="" />
+          </button>
+        </div>
+        <div className="oneSearchBarDiv">
+          <p>Search by music style:</p>
+          <Search
+            {...{
+              searchString: musicStyleString,
+              setSearchString: setMusicStyleString,
+            }}
+          />
+          <button className="searchBtn">
+            <img src="public/icons8-search-50.png" alt="" />
+          </button>
+        </div>
       </div>
       <div className="allPostsDiv">
         {/* //////ALT WAY TO DO THE SEARCH FILTER, CAN'T FILTER MULTIPLE FIELDS/////
