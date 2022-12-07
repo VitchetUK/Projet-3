@@ -33,7 +33,7 @@ const MyRequests = () => {
           return (
             <div className="oneRequest">
               <div key={element._id}>
-                <Card {...element} />
+                <Card {...{ ...element, cardType: "one-band/" }} />
               </div>
               <button
                 onClick={() =>
@@ -54,7 +54,7 @@ const MyRequests = () => {
           return (
             <div className="oneRequest">
               <div key={element._id}>
-                <Card {...element} />
+                <Card {...{ ...element, cardType: "one-musician/" }} />
               </div>
               <button
                 onClick={() =>

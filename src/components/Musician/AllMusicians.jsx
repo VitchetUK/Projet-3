@@ -63,7 +63,7 @@ const AllMusicians = () => {
       </div>
       <div className="allPostsDiv">
         {musicians.map((element) => {
-          return <Card {...element} />;
+          return <Card {...{ ...element, cardType: "" }} />;
           {
             /* return (
             <div className="onePostDiv" key={element._id}>
