@@ -43,13 +43,14 @@ const FormMusician = () => {
       <form className="form" onSubmit={handleSubmit}>
         <h2>Looking for a band to join? Create a request!</h2>
         <div className="labelInput">
-          <label htmlFor="instruments">Instruments:</label>
+          <label htmlFor="instruments">Instruments you are playing:</label>
           <input
             type="string"
             id="instruments"
             name="instruments"
             onChange={handleChange}
             value={values.instruments}
+            placeholder="bass, ukulele..."
           />
         </div>
         <div className="labelInput">
@@ -60,6 +61,7 @@ const FormMusician = () => {
             name="musicStyle"
             onChange={handleChange}
             value={values.musicStyle}
+            placeholder="trap, classic..."
           />
         </div>
         <div className="labelInput">
@@ -70,26 +72,29 @@ const FormMusician = () => {
             name="city"
             onChange={handleChange}
             value={values.city}
+            placeholder="Tourcoing, Toulouse..."
           />
         </div>
         <div className="labelInput">
-          <label htmlFor="experience">Experience:</label>
+          <label htmlFor="experience">Experience (in years):</label>
           <input
             type="string"
             id="experience"
             name="experience"
             onChange={handleChange}
             value={values.experience}
+            placeholder="1, 10, 50..."
           />
         </div>
         <div className="labelInput">
-          <label htmlFor="description">Description:</label>
+          <label htmlFor="description">Quick description:</label>
           <input
             type="string"
             id="description"
             name="description"
             onChange={handleChange}
             value={values.description}
+            placeholder="Solo guitarist looking for a rock band..."
           />
         </div>
         <div className="labelInput">
@@ -100,6 +105,7 @@ const FormMusician = () => {
             name="availability"
             onChange={handleChange}
             value={values.availability}
+            placeholder="Often, casual player, professionnal player..."
           />
         </div>
         <button className="formBtn">Submit</button>

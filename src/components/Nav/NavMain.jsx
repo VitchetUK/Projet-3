@@ -12,14 +12,14 @@ const NavMain = () => {
             <img className="logoImg" src="/logo-museek.png" alt="" />
           </NavLink>
         </li>
+        <li>
+          <NavLink to="/all-bands">All Bands</NavLink>
+        </li>
+        <li>
+          <NavLink to="/all-musicians">all Musicians</NavLink>
+        </li>
         {isLoggedIn && (
           <>
-            <li>
-              <NavLink to="/all-bands">All Bands</NavLink>
-            </li>
-            <li>
-              <NavLink to="/all-musicians">all Musicians</NavLink>
-            </li>
             <li>
               <NavLink to="/all-bands/create">Bands Form</NavLink>
             </li>
@@ -30,10 +30,7 @@ const NavMain = () => {
               <NavLink to="/my-requests">My requests</NavLink>
             </li>
             <li>
-              <NavLink to="/profile">
-                {/* Hi {currentUser && currentUser.name} */}
-                my profile
-              </NavLink>
+              <NavLink to="/profile">Profile of {currentUser.name}</NavLink>
             </li>
             <button className="logoutBtn" onClick={removeUser}>
               Log-Out
