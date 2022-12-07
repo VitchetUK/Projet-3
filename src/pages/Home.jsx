@@ -8,14 +8,14 @@ const Home = () => {
         <div className="homePageLinksDivs">
           <button className="homePageBtn">
             <Link className="homePageLinks" to="/all-bands">
-              Looking for a band?
+              LOOKING FOR A BAND?
             </Link>
           </button>
         </div>
         <div className="homePageLinksDivs">
           <button className="homePageBtn">
             <Link className="homePageLinks" to="/all-musicians">
-              Looking for a musician?
+              LOOKING FOR A MUSICIAN?
             </Link>
           </button>
         </div>
