@@ -14,7 +14,7 @@ import FormBand from "./components/Forms/FormBand";
 import FormMusician from "./components/Forms/FormMusician";
 import FormEditProfile from "./components/Forms/FormEditProfile";
 import Contact from "./pages/Contact";
-import MyRequests from "./pages/Myrequests";
+import MyRequests from "./pages/MyRequests";
 
 function App() {
   return (
