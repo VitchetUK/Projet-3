@@ -116,7 +116,7 @@ ul {
 }
 
 .onePostInfo {
-  margin: 0.5rem 0 1rem 2rem;
+  margin: 0.5rem 0.5rem 1rem 2rem;
   color: grey;
 }
 
@@ -415,7 +415,41 @@ label {
   flex-direction: column;
 }*/
 
+.allReq {
+  margin-top: 1.5rem;
+}
+
 .oneRequest {
   display: flex;
   flex-direction: column;
+  max-width: 300px;
+}
+
+.deleteReqBtn {
+  border: none;
+  background-color: #fcfcfcff;
+  color: #fcaf9f;
+  font-family: "Work Sans", sans-serif;
+  cursor: pointer;
+  margin: 1em 0 0 35%;
+  width: 3rem;
+}
+
+.allReqsDiv {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: left;
+  max-width: 95%;
+  margin: 0.2rem 0 0 5%;
+  background-color: #fcfcfcff;
+  margin-bottom: 3rem;
+}
+
+.h2Req {
+  font-family: "Work Sans", sans-serif;
+  color: #472d30;
+  text-transform: uppercase;
+  background-color: rgba(241, 238, 238, 0.634);
+  padding: 0.5rem 1rem 0.5rem 4%;
 }
