@@ -8,7 +8,6 @@ const FormEditProfile = () => {
   // Set the default value as current value from the user
 
   const { currentUser, authenticateUser } = useAuth();
-  console.log(currentUser);
   const [values, handleChange] = useForm({
     name: currentUser.name,
     username: currentUser.username,
@@ -25,27 +24,8 @@ const FormEditProfile = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const fd = new FormData();
-
-    //////////////////// ALT WAY TO DO THE APPEND WITHOUT A LOOP///////////////////
-
-    // fd.append("name", values.name);
-    // fd.append("username", values.username);
-    // fd.append("phone", values.phone);
-    // fd.append("age", values.age);
-    // fd.append("twitter", values.twitter);
-    // fd.append("instagram", values.instagram);
-    // fd.append("displayEmail", values.displayEmail);
-    // fd.append("picture", values.picture);
-
-    // for (const key in values) {
-    //   fd.apppend(key, values[key]);
-    // }
-
     for (const key in values) {
       fd.append(key, values[key]);
-
-      //////////////////////COMMENT IF YOU DON'T WANT ALL FIELDS NEEDED TO SEND FORM //////////////////////////
-
       if (values[key] === "") {
         return setError({ message: "All fields are required" });
       }
@@ -146,7 +126,6 @@ const FormEditProfile = () => {
             id="picture"
             name="picture"
             onChange={handleChange}
-            // value={values.picture}
           />
         </div>
         <button>Submit</button>
