@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { useParams, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import service from "../api/apiHandler";
 import useAuth from "../auth/useAuth";
+import Spinner from "../components/Spinner";
 
 const Profile = () => {
   const [user, setUser] = useState(null);
@@ -30,11 +31,7 @@ const Profile = () => {
   };
 
   if (!user) {
-    return (
-      <div className="spinnerDiv">
-        <div className="spinner"></div>
-      </div>
-    );
+    return <Spinner />;
   }
 
   return (

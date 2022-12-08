@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import service from "../../api/apiHandler";
 import { Link } from "react-router-dom";
+import Spinner from "../Spinner";
 
 const OneMusician = () => {
   const [musician, setMusician] = useState(null);
@@ -18,12 +19,7 @@ const OneMusician = () => {
       });
   }, []);
 
-  if (!musician)
-    return (
-      <div className="spinnerDiv">
-        <div className="spinner"></div>
-      </div>
-    );
+  if (!musician) return <Spinner />;
 
   return (
     <>

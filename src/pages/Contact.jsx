@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import service from "../api/apiHandler";
+import Spinner from "../components/Spinner";
 
 const Contact = () => {
   const [contact, setContact] = useState(null);
@@ -17,12 +18,7 @@ const Contact = () => {
       });
   }, []);
 
-  if (!contact)
-    return (
-      <div className="spinnerDiv">
-        <div className="spinner"></div>
-      </div>
-    );
+  if (!contact) return <Spinner />;
   return (
     <div className="contactDiv">
       <div className="profilePageDiv">
