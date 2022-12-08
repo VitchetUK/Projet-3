@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import service from "../../api/apiHandler";
+import Spinner from "../Spinner";
 
 const OneBand = () => {
   const [band, setBand] = useState(null);
@@ -19,12 +20,7 @@ const OneBand = () => {
       });
   }, []);
 
-  if (!band)
-    return (
-      <div className="spinnerDiv">
-        <div className="spinner"></div>
-      </div>
-    );
+  if (!band) return <Spinner />;
 
   return (
     <>

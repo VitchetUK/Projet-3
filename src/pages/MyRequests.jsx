@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import service from "../api/apiHandler";
-import { Link } from "react-router-dom";
 import Card from "../components/Card/Card";
+import Spinner from "../components/Spinner";
 
 const MyRequests = () => {
   const [requests, setRequests] = useState({});
@@ -17,10 +17,7 @@ const MyRequests = () => {
   if (Object.entries(requests).length === 0) {
     return (
       <>
-        <div>no requests here</div>
-        <div className="spinnerDiv">
-          <div className="spinner"></div>
-        </div>
+        <Spinner />
       </>
     );
   }

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import service from "../../api/apiHandler";
 import Card from "../Card/Card";
 import Search from "../Search/Search";
+import Spinner from "../Spinner";
 
 const AllMusicians = () => {
   const [musicians, setMusicians] = useState(null);
@@ -19,11 +19,7 @@ const AllMusicians = () => {
   }, [searchString, citySearchString, musicStyleString]);
 
   if (!musicians) {
-    return (
-      <div className="spinnerDiv">
-        <div className="spinner"></div>
-      </div>
-    );
+    return <Spinner />;
   }
 
   return (
