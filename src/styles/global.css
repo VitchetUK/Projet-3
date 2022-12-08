@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -12,27 +13,15 @@ body {
   background-color: #fcfcfcff;
 }
 
-/* html {
-	font-family: "Manrope", sans-serif;
-}
-
-a {
-	text-decoration: none;
-	color: inherit;
-}
-*/
-
 ul {
   list-style-type: none;
 }
 
 .logoImg {
   height: 3rem;
-  margin: 0;
-  padding: -2;
-  /* display: inline; */
 }
 
+/* SPINNER============================================ */
 .spinnerDiv {
   display: flex;
   justify-content: center;
@@ -70,12 +59,13 @@ ul {
     transform: rotate(1turn);
   }
 }
+/* ============================================  */
 
 .searchDiv {
   height: 4rem;
-  width: 90%;
+  width: 95%;
   box-shadow: 0 15px 20px -20px rgb(200, 200, 200);
-  margin: 5px 0 15px 5%;
+  margin: 5px 0 15px 2.5%;
   background-color: #fcfcfcff;
 }
 
@@ -86,38 +76,31 @@ ul {
   justify-content: left;
   max-width: 95%;
   margin: 0.2rem 0 0 5%;
-  /* margin-top: 15px; */
-  /* background-color: #b0a8b9; */
   background-color: #fcfcfcff;
-  /* border-left: 3px solid #ff8066; */
-  /* box-shadow: 20px 0 20px -10px rgb(211, 210, 210),
-    -20px 0 20px -10px rgb(211, 210, 210); */
 }
 
 .onePostDiv {
   display: inline-flex;
   flex-direction: column;
-  /* justify-content: center; */
   margin: 1.5rem 1.6rem 0 0rem;
-  /* padding: 1rem; */
-  /* min-width: 20%; */
-  border-top: 4px solid #fcaf9f;
   border-radius: 12px;
   background-color: white;
   box-shadow: 0px 4px 8px rgba(41, 41, 41, 0.08);
 }
 
 .onePostName {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 900;
   margin-left: 1rem;
   margin-top: 0.5rem;
   color: #472d30;
+  font-family: "Montserrat", sans-serif;
 }
 
 .onePostInfo {
   margin: 0.5rem 0.5rem 1rem 2rem;
-  color: grey;
+  color: rgb(170, 168, 168);
+  font-size: 1rem;
 }
 
 a {
@@ -126,17 +109,33 @@ a {
 }
 
 .oneBandId {
-  margin-left: 4rem;
+  margin-top: 10em;
+  display: flex;
+  justify-content: center;
 }
 
-.oneReqLinks {
+.oneBandImg {
+  max-width: 30%;
+  margin-right: 2em;
+  border-radius: 5px;
+}
+
+.oneBandDescription {
+  margin-top: 3em;
+}
+
+.oneBandDescription p {
+  color: grey;
+}
+
+/* .oneReqLinks {
   color: white;
   font-weight: bolder;
   border-radius: 10px;
   cursor: pointer;
-}
+} */
 
-.oneReqBtn {
+/* .oneReqBtn {
   border-radius: 50px;
   border: 3px solid #ebfdf8;
   background: #fcaf9f;
@@ -144,49 +143,56 @@ a {
   height: 50px;
   margin-top: 1rem;
   transition: all 0.5s ease;
-}
+} */
 
 .homePageDiv {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  height: calc(100vh - 5rem);
-  width: 100vw;
-  position: relative;
-  overflow: hidden;
+  height: calc(100vh - 4.5rem);
+}
+
+h1 {
+  font-family: "Work Sans", sans-serif;
+  color: white;
+  font-size: 5rem;
+  margin: 1em 0 0 0.2em;
+  width: 65%;
 }
 
 .homePageBackground {
   background-image: url("../caleb-george-pH88tHG-1yw-unsplash3.jpg");
   background-size: cover;
-  /* margin-top: 5px; */
-  position: relative;
-  bottom: 0;
+  margin-top: 5px;
   /* z-index: -2; */
 }
 
 .homePageLinksDivs {
-  margin: 15rem 3rem 0 3rem;
+  margin: 2rem 3rem 0 0;
   height: 10rem;
+  height: 15%;
 }
 
 .homePageLinks {
-  color: rgb(180, 175, 175);
-  font-size: 1rem;
-  /* font-weight: bolder; */
-  border-radius: 10px;
+  color: white;
+  font-size: 1.2rem;
   cursor: pointer;
-  font-family: "Work Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
 }
 
 .homePageBtn {
-  border-radius: 100px;
-  border: 3px solid #fcaf9f;
-  background: rgba(255, 255, 255, 0.636);
-  width: 15vw;
+  border-radius: 5px;
+  border: 2px solid #fcae9fab;
+  background: rgba(255, 255, 255, 0.221);
+  width: 25vw;
   height: 80px;
   margin-top: 1rem;
   transition: all 0.5s ease;
+}
+
+.homePageBtnDiv {
+  display: flex;
+  flex-direction: column;
+  margin: 7.5em 0 0 2em;
 }
 
 .homePageBtn:hover {
@@ -197,18 +203,15 @@ a {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  justify-content: center;
-  position: absolute;
-  /* gap: 1rem; */
   align-items: center;
-  /* background-color: rgb(255, 110, 110); */
   box-shadow: 0px 4px 8px rgba(41, 41, 41, 0.08);
   border-radius: 50px;
   background-color: white;
-  height: 75vh;
-  width: 35vw;
+  /* width: 35vw;*/
   margin: 7vh 0;
+  padding: 3em 5em;
 }
+
 .formSignLog {
   display: flex;
   flex-wrap: wrap;
@@ -277,8 +280,7 @@ label {
   transition: all 0.5s ease;
 }
 
-.formBtn:hover,
-.formBtnEdit:hover {
+.formBtn:hover {
   box-shadow: 5px 5px #cef9ed;
 }
 
@@ -296,14 +298,15 @@ label {
   height: 200px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+  border-bottom: 3px solid #fcaf9f;
 }
 
 .profilePageDiv {
   display: flex;
   justify-content: center;
-  padding-top: 10rem;
+  /* padding-top: 10rem; */
   width: 40vw;
-  margin-left: 30vw;
+  /* margin-left: 30vw; */
   /* position: absolute; */
 }
 
@@ -316,6 +319,7 @@ label {
   overflow: hidden;
   /* object-position: center; */
   border-radius: 50%;
+  border: 3px solid rgba(255, 255, 255, 0.446);
 }
 
 .profilePicPage {
@@ -330,46 +334,64 @@ label {
 
 .profileEditDiv {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
 }
 
 .formBtnEdit {
   color: white;
-  font-weight: bolder;
+  font-family: "Work Sans", sans-serif;
+  font-size: 0.9em;
   border-top-left-radius: 50px;
   border-bottom-left-radius: 50px;
-  border: none;
   background: #fcaf9f;
-  width: 8vw;
+  width: 10vw;
   height: 50px;
-  margin: 5rem 0.2rem 0 0;
+  margin: 4rem 0.1rem 0 0;
   cursor: pointer;
-  transition: all 0.5s ease;
   text-align: center;
+  padding-top: 1em;
+  border-top: 1px solid #ebfdf8;
 }
 
 .formBtnDelete {
   color: white;
-  font-weight: bolder;
+  font-family: "Work Sans", sans-serif;
+  font-size: 0.9em;
   border-top-right-radius: 50px;
   border-bottom-right-radius: 50px;
   border: none;
   background: #fcaf9f;
-  width: 8vw;
+  width: 10vw;
   height: 50px;
-  margin: 5rem 0 0 0.2rem;
+  margin: 4rem 0 0 0.1rem;
   cursor: pointer;
   transition: all 0.5s ease;
-  text-align: center;
+  border-top: 1px solid #ebfdf8;
 }
 
-/* body.profilePageBackground {
+.profilePageBackground {
   background-image: url("../public/caleb-george-pH88tHG-1yw-unsplash3.jpg");
   background-size: cover;
   margin-top: 5px;
-  filter: blur(8px);
-  -webkit-filter: blur(8px);
-} */
+  backdrop-filter: blur(8px);
+  /* z-index: -2; */
+  height: calc(100vh - 4.5rem);
+  padding-top: 4em;
+}
+
+.profileAllDivs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 50%;
+  width: 30vw;
+  margin-left: 35%;
+  padding: 5em;
+  border-radius: 20px;
+  box-shadow: 0px 5px 18px rgba(41, 41, 41, 0.08);
+  /* backdrop-filter: blur(5px); */
+  background-color: rgba(255, 255, 255, 0.28);
+}
 
 .searchDiv {
   display: flex;
@@ -452,4 +474,33 @@ label {
   text-transform: uppercase;
   background-color: rgba(241, 238, 238, 0.634);
   padding: 0.5rem 1rem 0.5rem 4%;
+}
+
+.formEditProfile {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  /* gap: 1rem; */
+  align-items: center;
+  /* background-color: rgb(255, 110, 110); */
+  box-shadow: 0px 4px 8px rgba(41, 41, 41, 0.08);
+  border-radius: 50px;
+  background-color: white;
+  width: 35vw;
+  margin: 3vh 0;
+  padding: 1.5em 2em;
+}
+
+.updateProfileBtn {
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  font-family: "Work Sans", sans-serif;
+  color: #fcaf9f;
+}
+
+.contactDiv {
+  margin-top: 10em;
 }

@@ -39,42 +39,44 @@ const Profile = () => {
 
   return (
     <div className="profilePageBackground">
-      <div className="profilePageDiv">
-        <div className="profilePicPageDiv">
-          <img className="profilePicPage" src={user.picture} alt="" />
+      <div className="profileAllDivs">
+        <div className="profilePageDiv">
+          <div className="profilePicPageDiv">
+            <img className="profilePicPage" src={user.picture} alt="" />
+          </div>
+          <div className="profileInfo">
+            <ul>
+              <li>{user.name}</li>
+              <li>{user.username}</li>
+              <li>{user.phone}</li>
+              <li>{user.age}</li>
+              <li>
+                twitter:{" "}
+                <a href={`https://twitter.com/${user.twitter}`}>
+                  @{user.twitter}
+                </a>
+              </li>
+              <li>
+                instagram:{" "}
+                <a href={`https://www.instagram.com/${user.instagram}`}>
+                  @{user.instagram}
+                </a>
+              </li>
+              <li>{user.displayEmail}</li>
+            </ul>
+          </div>
         </div>
-        <div className="profileInfo">
-          <ul>
-            <li>{user.name}</li>
-            <li>{user.username}</li>
-            <li>{user.phone}</li>
-            <li>{user.age}</li>
-            <li>
-              twitter:{" "}
-              <a href={`https://twitter.com/${user.twitter}`}>
-                @{user.twitter}
-              </a>
-            </li>
-            <li>
-              instagram:{" "}
-              <a href={`https://www.instagram.com/${user.instagram}`}>
-                @{user.instagram}
-              </a>
-            </li>
-            <li>{user.displayEmail}</li>
-          </ul>
+        <div className="profileEditDiv">
+          <NavLink className="formBtnEdit" to="/profile/edit">
+            EDIT
+          </NavLink>
+          <button
+            onClick={() => deleteAccount(user._id)}
+            className="formBtnDelete"
+          >
+            DELETE ACCOUNT
+          </button>
         </div>
-      </div>
-      <div className="profileEditDiv">
-        <NavLink className="formBtnEdit" to="/profile/edit">
-          Edit
-        </NavLink>
-        <button
-          onClick={() => deleteAccount(user._id)}
-          className="formBtnDelete"
-        >
-          delete my account
-        </button>
       </div>
     </div>
   );

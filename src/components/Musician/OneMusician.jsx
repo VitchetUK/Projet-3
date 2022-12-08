@@ -27,22 +27,43 @@ const OneMusician = () => {
 
   return (
     <>
-      <div className="searchDiv"></div>
       <div className="oneBandId">
-        <img className="profilePic" src={musician.user.picture} alt="" />
-        <p>{musician.instruments}</p>
-        <p>{musician.musicStyle}</p>
-        <p>{musician.city}</p>
-        <p>{musician.experience}</p>
-        <p>{musician.description}</p>
-        <button className="oneReqBtn">
-          <Link
-            className="oneReqLinks"
-            to={`/contact/musicians/${musician._id}`}
-          >
-            Contact {musician.user.name}
-          </Link>
-        </button>
+        <img className="oneBandImg" src={musician.user.picture} alt="" />
+
+        <div className="oneBandDescription">
+          <div>
+            <h4>{musician.user.name} plays:</h4>
+            <p>{musician.instruments}</p>
+          </div>
+
+          <div>
+            <h4>The music {musician.user.name} is into:</h4>
+            <p>{musician.musicStyle}</p>
+          </div>
+
+          <div>
+            <h4>{musician.user.name}'s location:</h4>
+            <p>{musician.city}</p>
+          </div>
+
+          <div>
+            <h4>{musician.user.name}'s years of exerience:</h4>
+            <p>{musician.experience}</p>
+          </div>
+
+          <div>
+            <h4>Request's description:</h4> <p>{musician.description}</p>
+          </div>
+
+          <button className="updateProfileBtn">
+            <Link
+              className="updateProfileBtn"
+              to={`/contact/musicians/${musician._id}`}
+            >
+              Contact {musician.user.name}
+            </Link>
+          </button>
+        </div>
       </div>
     </>
   );

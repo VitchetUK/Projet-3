@@ -24,29 +24,31 @@ const Contact = () => {
       </div>
     );
   return (
-    <div className="profilePageDiv">
-      <div className="profilePicPageDiv">
-        <img className="profilePic" src={contact.user.picture} alt="" />
+    <div className="contactDiv">
+      <div className="profilePageDiv">
+        <div className="profilePicPageDiv">
+          <img className="profilePic" src={contact.user.picture} alt="" />
+        </div>
+        <ul>
+          <li>{contact.user.name}</li>
+          <li>{contact.user.username}</li>
+          <li>{contact.user.phone}</li>
+          <li>{contact.user.age}</li>
+          <li>
+            twitter:{" "}
+            <a href={`https://twitter.com/${contact.user.twitter}`}>
+              @{contact.user.twitter}
+            </a>
+          </li>
+          <li>
+            instagram:{" "}
+            <a href={`https://www.instagram.com/${contact.user.instagram}`}>
+              @{contact.user.instagram}
+            </a>
+          </li>
+          <li>{contact.user.displayEmail}</li>
+        </ul>
       </div>
-      <ul>
-        <li>{contact.user.name}</li>
-        <li>{contact.user.username}</li>
-        <li>{contact.user.phone}</li>
-        <li>{contact.user.age}</li>
-        <li>
-          twitter:{" "}
-          <a href={`https://twitter.com/${contact.user.twitter}`}>
-            @{contact.user.twitter}
-          </a>
-        </li>
-        <li>
-          instagram:{" "}
-          <a href={`https://www.instagram.com/${contact.user.instagram}`}>
-            @{contact.user.instagram}
-          </a>
-        </li>
-        <li>{contact.user.displayEmail}</li>
-      </ul>
     </div>
   );
 };
