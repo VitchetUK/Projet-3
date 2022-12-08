@@ -34,10 +34,6 @@ const AllBands = () => {
         <div className="oneSearchBarDiv">
           <p>Search by instrument:</p>
           <Search {...{ searchString, setSearchString }} />
-          {/* <button className="searchBtn">
-            <img src="public/icons8-search-50.png" alt="" />
-          </button>
-          <a target="_blank" href="https://icons8.com/icon/132/search">Search</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a> */}
         </div>
         <div className="oneSearchBarDiv">
           <p>Search by city:</p>
@@ -47,9 +43,6 @@ const AllBands = () => {
               setSearchString: setCitySearchString,
             }}
           />
-          {/* <button className="searchBtn">
-            <img src="public/icons8-search-50.png" alt="" />
-          </button> */}
         </div>
         <div className="oneSearchBarDiv">
           <p>Search by music style:</p>
@@ -59,35 +52,11 @@ const AllBands = () => {
               setSearchString: setMusicStyleString,
             }}
           />
-          {/* <button className="searchBtn">
-            <img src="public/icons8-search-50.png" alt="" />
-          </button> */}
         </div>
       </div>
       <div className="allPostsDiv">
         {bands.map((element) => {
           return <Card {...{ ...element, cardType: "" }} />;
-          {
-            /* return (
-            <div className="onePostDiv" key={element._id}>
-              <div className="imgLinkDiv">
-                <Link to={`${element._id}`}>
-                  <img
-                    className="profilePic"
-                    src={element.user.picture}
-                    alt=""
-                  />
-                </Link>
-              </div>
-              <p className="onePostName">{element.user.name}</p>
-              <div className="onePostInfo">
-                <p>Music Style: {element.musicStyle}</p>
-                <p>Searched Musician: {element.searchedMusician}</p>
-                <p>City: {element.city}</p>
-              </div>
-            </div>
-          ); */
-          }
         })}
       </div>
     </>
